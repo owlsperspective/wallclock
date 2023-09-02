@@ -80,5 +80,5 @@ Copyright 2023 Owl's Perspective
 The MIT License – Open Source Initiative<br />
 https://opensource.org/license/mit/
 
-(日本語参考訳)
-https://licenses.opensource.jp/MIT/MIT.html<br />
+(日本語参考訳)<br />
+https://licenses.opensource.jp/MIT/MIT.html
