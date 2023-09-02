@@ -16,6 +16,9 @@
     Delphi Community Edition - エンバカデロ・テクノロジーズ<br />
     https://www.embarcadero.com/jp/products/delphi/starter
 
+## 実行ファイル構成
+WallClock.exe(実行プログラム)とsk4d.dll(Skia4Delphi)を同一の場所に配置します。
+
 ## 技術的なポイント
 ### マウス操作を透過
 pikさんの以下の記事そのままです。
@@ -82,3 +85,6 @@ https://opensource.org/license/mit/
 
 (日本語参考訳)<br />
 https://licenses.opensource.jp/MIT/MIT.html
+
+Skia4DelphiはMITライセンスの元で公開されています。<br />
+https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
