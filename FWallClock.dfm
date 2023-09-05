@@ -236,6 +236,9 @@ object FormWallClock: TFormWallClock
     OnPopup = PopupMenuPopup
     Left = 128
     Top = 64
+    object MenuItemMonitors: TMenuItem
+      Caption = #12514#12491#12479'(&M)'
+    end
     object MenuItemExit: TMenuItem
       Action = ActionExit
     end
