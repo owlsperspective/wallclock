@@ -69,11 +69,20 @@ SetWindowPos function (winuser.h) - Win32 apps | Microsoft Learn<br />
 https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowpos
 
 ### マルチモニタへの対応と表示位置の調整
-マルチモニタの構成は動的に変更できるため、`PopupMenu`がポップアップされるたびに`Screen.Monitors[]`の情報で`MenuItemMonitors`の下にモニタごとのメニューアイテムを生成し直しています。<br />
-モニタごとのメニューアイテムを選択すると、フォームの位置をそのモニタの`WorkAreaRect`(Win32APIの`GetMonitorInfo`で取得した`MONITORINFO`構造体の`rcWork`)の右上に移動します。またモニタを選択したときはそのハンドルを保持しておきます。<br />
-マルチモニタの情報が取得できない(`Screen.Monitors[]`が空の)ときは`Screen.WorkAreaRect`(Win32APIの`SystemParametersInfo`に`SPI_GETWORKAREA`を指定して取得した領域)を使用して表示位置を調整します。<br />
-プログラムの起動時にはプライマリモニタが選択されます。また選択されているモニタがなくなった(`Screen.Monitors[]`の中に保存しておいたモニタのハンドルが見つからない)ときもプライマリモニタが選択されます。<br />
-`WM_DISPLAYCHANGE`メッセージをハンドルしてモニタの解像度が変更されたことを検知して、選択されているモニタ上で表示位置を再調整します。
+Windowsではマルチモニタの構成は動的に変更できますが、DelphiのScreen.Monitorsはいくつかの特定の状況を除き再構成されず、構成の変更が反映されません。そこで
+
+[RSP-37708] Handles in the TScreen.Monitors list are not updated when Windows sends WM_DisplayChange - Embarcadero Technologies<br />
+https://quality.embarcadero.com/browse/RSP-37708
+
+のコメントにあるworkaroundに従って、`PopupMenu`がポップアップされるたびに`SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);`で強制的に`Screen.Monitors`を再初期化してからモニタごとのメニューアイテムを`MenuItemMonitors`の下に生成し直しています。
+
+モニタごとのメニューアイテムを選択すると、フォームの位置をそのモニタの`WorkAreaRect`の右上に移動します。またモニタを選択したときはそのハンドルを保持しておきます。
+
+マルチモニタの情報が取得できない(`Screen.Monitors[]`が空の)ときは`Screen.WorkAreaRect`(Win32APIの`SystemParametersInfo`に`SPI_GETWORKAREA`を指定して取得した領域)を使用して表示位置を調整します。
+
+プログラムの起動時にはプライマリモニタが選択されます。また選択されているモニタがなくなった(`Screen.Monitors[]`の中に保存しておいたモニタのハンドルが見つからない)ときもプライマリモニタが選択されます。
+
+モニタの解像度が変更されたときは`WM_DISPLAYCHANGE`メッセージをハンドルして、選択されているモニタ上で表示位置を再調整します。
 
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。

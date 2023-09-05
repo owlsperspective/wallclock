@@ -299,6 +299,8 @@ var
   I: Integer;
   MenuItem: TMenuItem;
 begin
+  SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);  // Force call Screen.GetMonitors. See https://quality.embarcadero.com/browse/RSP-37708
+
   MenuItemMonitors.Clear;
 
   for I := 0 to Screen.MonitorCount - 1 do
