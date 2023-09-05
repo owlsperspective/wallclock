@@ -69,7 +69,7 @@ SetWindowPos function (winuser.h) - Win32 apps | Microsoft Learn<br />
 https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowpos
 
 ### マルチモニタへの対応と表示位置の調整
-Windowsではマルチモニタの構成は動的に変更できますが、DelphiのScreen.Monitorsはいくつかの特定の状況を除き再構成されず、構成の変更が反映されません。そこで
+Windowsではマルチモニタの構成は動的に変更できますが、Delphiの`Screen.Monitors`はいくつかの特定の状況を除き再構成されず、構成の変更が反映されません。そこで
 
 [RSP-37708] Handles in the TScreen.Monitors list are not updated when Windows sends WM_DisplayChange - Embarcadero Technologies<br />
 https://quality.embarcadero.com/browse/RSP-37708
