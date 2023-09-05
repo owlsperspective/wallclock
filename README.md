@@ -68,6 +68,9 @@ https://stackoverflow.com/questions/14811935/how-to-hide-an-application-from-tas
 SetWindowPos function (winuser.h) - Win32 apps | Microsoft Learn<br />
 https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowpos
 
+### 表示位置の調整
+モニタの解像度が変更されたことを検知するために`WM_DISPLAYCHANGE`メッセージをハンドルし、フォームの位置を`SetBounds`で`Screen.WorkAreaRect`の右上に移動しています。
+
 ## 既知かもしれない問題
 - マルチモニタに対する考慮がありません。マルチモニタ環境では意図しない位置に表示されるかもしれません。	
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
