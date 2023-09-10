@@ -75,7 +75,9 @@ Windowsではマルチモニタの構成は動的に変更できますが、Delp
 [RSP-37708] Handles in the TScreen.Monitors list are not updated when Windows sends WM_DisplayChange - Embarcadero Technologies<br />
 https://quality.embarcadero.com/browse/RSP-37708
 
-のコメントにあるworkaroundに従って、`PopupMenu`がポップアップされるたびに`SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);`で強制的に`Screen.Monitors`を再初期化してからモニタごとのメニューアイテムを`MenuItemMonitors`の下に生成し直しています。
+のコメントにあるworkaroundに従って、必要に応じて`SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);`で強制的に`Screen.Monitors`を再初期化しています。
+
+`PopupMenu`がポップアップされるたびに、モニタごとのメニューアイテムを`MenuItemMonitors`の下に生成し直しています。
 
 モニタごとのメニューアイテムを選択すると、フォームの位置をそのモニタの`WorkAreaRect`の右上に移動します。またモニタを選択したときはそのハンドルを保持しておきます。
 
@@ -83,7 +85,7 @@ https://quality.embarcadero.com/browse/RSP-37708
 
 プログラムの起動時にはプライマリモニタが選択されます。また選択されているモニタがなくなった(`Screen.Monitors[]`の中に保存しておいたモニタのハンドルが見つからない)ときもプライマリモニタが選択されます。
 
-モニタの解像度が変更されたときは`WM_DISPLAYCHANGE`メッセージをハンドルして、選択されているモニタ上で表示位置を再調整します。
+`WM_DISPLAYCHANGE`メッセージをハンドルすることでモニタの構成や解像度の変更を検知して、対象モニタや表示位置を再調整します。
 
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
