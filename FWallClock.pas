@@ -54,6 +54,7 @@ type
     procedure AdjustZOrder;
     procedure ShowTime;
     procedure BuildMonitorMenu;
+    procedure RefreshMonitors;
   protected
     procedure CreateParams(var Params: TCreateParams); override;
   public
@@ -202,6 +203,8 @@ var
   Monitor: TMonitor;
   WorkAreaRect: TRect;
 begin
+  RefreshMonitors;
+
   Monitor := nil;
   for I := 0 to Screen.MonitorCount - 1 do
   begin
@@ -299,7 +302,7 @@ var
   I: Integer;
   MenuItem: TMenuItem;
 begin
-  SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);  // Force call Screen.GetMonitors. See https://quality.embarcadero.com/browse/RSP-37708
+  RefreshMonitors;
 
   MenuItemMonitors.Clear;
 
@@ -333,6 +336,11 @@ begin
 
     MenuItemMonitors.Add(MenuItem);
   end;
+end;
+
+procedure TFormWallClock.RefreshMonitors;
+begin
+  SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);  // Force call Screen.GetMonitors. See https://quality.embarcadero.com/browse/RSP-37708
 end;
 
 end.
