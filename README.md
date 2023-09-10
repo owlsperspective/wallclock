@@ -1,4 +1,5 @@
-﻿# WallClock
+﻿![Screen shot](ScreenShot/GUI.png)
+# WallClock
 ## 概要
 - 設定機能も何もない、シンプルな壁時計です。起動するとメインモニタの右上に時刻と日付、曜日が表示されます。終了するときはタスクトレイアイコンを右クリックして終了を選択します。
 - 時計は24時間表記で、毎秒コロン(":")が点滅します。また毎正時の前後2秒間は文字の色が赤くなります。
@@ -68,11 +69,25 @@ https://stackoverflow.com/questions/14811935/how-to-hide-an-application-from-tas
 SetWindowPos function (winuser.h) - Win32 apps | Microsoft Learn<br />
 https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowpos
 
-### 表示位置の調整
-モニタの解像度が変更されたことを検知するために`WM_DISPLAYCHANGE`メッセージをハンドルし、フォームの位置を`SetBounds`で`Screen.WorkAreaRect`の右上に移動しています。
+### マルチモニタへの対応と表示位置の調整
+Windowsではマルチモニタの構成は動的に変更できますが、Delphiの`Screen.Monitors`はいくつかの特定の状況を除き再構成されず、構成の変更が反映されません。そこで
+
+[RSP-37708] Handles in the TScreen.Monitors list are not updated when Windows sends WM_DisplayChange - Embarcadero Technologies<br />
+https://quality.embarcadero.com/browse/RSP-37708
+
+のコメントにあるworkaroundに従って、必要に応じて`SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);`で強制的に`Screen.Monitors`を再初期化しています。
+
+`PopupMenu`がポップアップされるたびに、モニタごとのメニューアイテムを`MenuItemMonitors`の下に生成し直しています。
+
+モニタごとのメニューアイテムを選択すると、フォームの位置をそのモニタの`WorkAreaRect`の右上に移動します。またモニタを選択したときはそのハンドルを保持しておきます。
+
+マルチモニタの情報が取得できない(`Screen.Monitors[]`が空の)ときは`Screen.WorkAreaRect`(Win32APIの`SystemParametersInfo`に`SPI_GETWORKAREA`を指定して取得した領域)を使用して表示位置を調整します。
+
+プログラムの起動時にはプライマリモニタが選択されます。また選択されているモニタがなくなった(`Screen.Monitors[]`の中に保存しておいたモニタのハンドルが見つからない)ときもプライマリモニタが選択されます。
+
+`WM_DISPLAYCHANGE`メッセージをハンドルすることでモニタの構成や解像度の変更を検知して、対象モニタや表示位置を再調整します。
 
 ## 既知かもしれない問題
-- マルチモニタに対する考慮がありません。マルチモニタ環境では意図しない位置に表示されるかもしれません。	
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
 
 ## プログラムの変更について

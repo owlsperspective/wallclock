@@ -26,6 +26,7 @@ type
     ActionList: TActionList;
     ActionExit: TAction;
     PopupMenu: TPopupMenu;
+    MenuItemMonitors: TMenuItem;
     MenuItemExit: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -46,10 +47,14 @@ type
   private
     FLabelTime: array [0..7] of TSkLabel;
     FFadeDelta: Integer;
-    procedure AdjustPosition;
+    FMonitorHandle: THandle;
+    procedure DoClickMonitor(Sender: TObject);
+    procedure AdjustPosition(AMonitorHandle: THandle);
     procedure AdjustFigureColors(Highlight: Boolean);
     procedure AdjustZOrder;
     procedure ShowTime;
+    procedure BuildMonitorMenu;
+    procedure RefreshMonitors;
   protected
     procedure CreateParams(var Params: TCreateParams); override;
   public
@@ -73,13 +78,21 @@ begin
   FLabelTime[5] := Label6;
   FLabelTime[6] := Label7;
   FLabelTime[7] := Label8;
+
+  FMonitorHandle := INVALID_HANDLE_VALUE;
 end;
 
 procedure TFormWallClock.FormShow(Sender: TObject);
 var
   I: Integer;
+  Monitor: TMonitor;
 begin
-  AdjustPosition;
+  Monitor := Screen.PrimaryMonitor;
+  if Monitor <> nil then
+  begin
+    FMonitorHandle := Monitor.Handle;
+  end;
+  AdjustPosition(FMonitorHandle);
   AdjustFigureColors(False);
   for I := Low(FLabelTime) to High(FLabelTime) do
   begin
@@ -156,6 +169,7 @@ end;
 
 procedure TFormWallClock.PopupMenuPopup(Sender: TObject);
 begin
+  BuildMonitorMenu;
   AdjustZOrder;
 end;
 
@@ -172,12 +186,51 @@ end;
 
 procedure TFormWallClock.WmDisplayChange(var Message: TWMDisplayChange);
 begin
-  AdjustPosition;
+  AdjustPosition(FMonitorHandle);
 end;
 
-procedure TFormWallClock.AdjustPosition;
+procedure TFormWallClock.DoClickMonitor(Sender: TObject);
+var
+  MonitorIndex: Integer;
 begin
-  SetBounds(Screen.WorkAreaRect.Right - Width,0,Width,Height);
+  MonitorIndex := (Sender as TMenuItem).Tag;
+  AdjustPosition(Screen.Monitors[MonitorIndex].Handle);
+end;
+
+procedure TFormWallClock.AdjustPosition(AMonitorHandle: THandle);
+var
+  I: Integer;
+  Monitor: TMonitor;
+  WorkAreaRect: TRect;
+begin
+  RefreshMonitors;
+
+  Monitor := nil;
+  for I := 0 to Screen.MonitorCount - 1 do
+  begin
+    if Screen.Monitors[I].Handle = AMonitorHandle then
+    begin
+      Monitor := Screen.Monitors[I];
+      Break;
+    end;
+  end;
+
+  if Monitor = nil then
+  begin
+    Monitor := Screen.PrimaryMonitor;
+  end;
+
+  if Monitor = nil then
+  begin
+    WorkAreaRect := Screen.WorkAreaRect;
+    FMonitorHandle := INVALID_HANDLE_VALUE;
+  end
+  else
+  begin
+    WorkAreaRect := Monitor.WorkAreaRect;
+    FMonitorHandle := Monitor.Handle;
+  end;
+  SetBounds(WorkAreaRect.Right - Width,WorkAreaRect.Top,Width,Height);
 end;
 
 procedure TFormWallClock.AdjustFigureColors(Highlight: Boolean);
@@ -242,6 +295,52 @@ begin
   TrayIcon.Hint := Application.Title + sLineBreak +
                    Format('%0:.4d-%1:.2d-%2:.2d (%3:s)' + sLineBreak + '%4:.2d:%5:.2d:%6:.2d',
                           [ST.wYear,ST.wMonth,ST.wDay,CDOW[ST.wDayOfWeek],ST.wHour,ST.wMinute,ST.wSecond]);
+end;
+
+procedure TFormWallClock.BuildMonitorMenu;
+var
+  I: Integer;
+  MenuItem: TMenuItem;
+begin
+  RefreshMonitors;
+
+  MenuItemMonitors.Clear;
+
+  for I := 0 to Screen.MonitorCount - 1 do
+  begin
+    MenuItem := TMenuItem.Create(Self);
+    MenuItem.Tag := I;
+
+    MenuItem.Name := 'MenuItemMonitor' + IntToStr(Screen.Monitors[I].MonitorNum);
+    MenuItem.Caption := 'Monitor ' + IntToStr(Screen.Monitors[I].MonitorNum + 1);
+    if Screen.Monitors[I].Primary = True then
+    begin
+      MenuItem.Caption := MenuItem.Caption + ' (Primary)';
+    end;
+    MenuItem.OnClick := DoClickMonitor;
+    if (FMonitorHandle = INVALID_HANDLE_VALUE) then
+    begin
+      if Screen.Monitors[I].Primary = True then
+      begin
+        MenuItem.Checked := True;
+        FMonitorHandle := Screen.Monitors[I].Handle;
+      end;
+    end
+    else
+    begin
+      if FMonitorHandle = Screen.Monitors[I].Handle then
+      begin
+        MenuItem.Checked := True;
+      end;
+    end;
+
+    MenuItemMonitors.Add(MenuItem);
+  end;
+end;
+
+procedure TFormWallClock.RefreshMonitors;
+begin
+  SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);  // Force call Screen.GetMonitors. See https://quality.embarcadero.com/browse/RSP-37708
 end;
 
 end.
