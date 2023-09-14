@@ -45,6 +45,7 @@ type
       MinAlphaBlendValue: Integer =  80;
       MaxAlphaBlendValue: Integer = 255;
   private
+    FInitialize: Boolean;
     FLabelTime: array [0..7] of TSkLabel;
     FFadeDelta: Integer;
     FMonitorHandle: THandle;
@@ -70,6 +71,8 @@ implementation
 
 procedure TFormWallClock.FormCreate(Sender: TObject);
 begin
+  FInitialize  := False;
+
   FLabelTime[0] := Label1;
   FLabelTime[1] := Label2;
   FLabelTime[2] := Label3;
@@ -87,6 +90,12 @@ var
   I: Integer;
   Monitor: TMonitor;
 begin
+  if FInitialize = True then
+  begin
+    Exit;
+  end;
+  FInitialize := True;
+
   Monitor := Screen.PrimaryMonitor;
   if Monitor <> nil then
   begin
