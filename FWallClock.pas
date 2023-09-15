@@ -40,9 +40,9 @@ type
     procedure ActionReverseColorsExecute(Sender: TObject);
   private
     const
-      FigureColor: array [Boolean] of TColor = ($6040A0, $C0A0FF);
+      FigureColor: array [Boolean] of TColor = ($6040A0, $DFFFD0);
       HighlightColor: TColor = $FF4B00;
-      BorderColor: array [Boolean] of TColor = ($F0D0FF, $301070);
+      BorderColor: array [Boolean] of TColor = ($F0D0FF, $80A040);
       FadeOutDelta: Integer = -10;
       FadeInDelta: Integer = 20;
       MinAlphaBlendValue: Integer =  80;
