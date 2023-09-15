@@ -231,6 +231,10 @@ object FormWallClock: TFormWallClock
       Caption = #32066#20102'(&X)'
       OnExecute = ActionExitExecute
     end
+    object ActionReverseColors: TAction
+      Caption = #33394#12434#21453#36578'(&R)'
+      OnExecute = ActionReverseColorsExecute
+    end
   end
   object PopupMenu: TPopupMenu
     OnPopup = PopupMenuPopup
@@ -238,6 +242,9 @@ object FormWallClock: TFormWallClock
     Top = 64
     object MenuItemMonitors: TMenuItem
       Caption = #12514#12491#12479'(&M)'
+    end
+    object MenuItemReverseColors: TMenuItem
+      Action = ActionReverseColors
     end
     object MenuItemExit: TMenuItem
       Action = ActionExit

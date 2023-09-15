@@ -25,8 +25,10 @@ type
     TrayIcon: TTrayIcon;
     ActionList: TActionList;
     ActionExit: TAction;
+    ActionReverseColors: TAction;
     PopupMenu: TPopupMenu;
     MenuItemMonitors: TMenuItem;
+    MenuItemReverseColors: TMenuItem;
     MenuItemExit: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -35,11 +37,12 @@ type
     procedure TrayIconClick(Sender: TObject);
     procedure PopupMenuPopup(Sender: TObject);
     procedure ActionExitExecute(Sender: TObject);
+    procedure ActionReverseColorsExecute(Sender: TObject);
   private
     const
-      FigureColor: TColor = $6040A0;
-      HighlightColor: TColor = $FF0000;
-      BorderColor: TColor = $FFFFFF;
+      FigureColor: array [Boolean] of TColor = ($6040A0, $DFFFD0);
+      HighlightColor: TColor = $FF4B00;
+      BorderColor: array [Boolean] of TColor = ($F0D0FF, $80A040);
       FadeOutDelta: Integer = -10;
       FadeInDelta: Integer = 20;
       MinAlphaBlendValue: Integer =  80;
@@ -52,6 +55,7 @@ type
     procedure DoClickMonitor(Sender: TObject);
     procedure AdjustPosition(AMonitorHandle: THandle);
     procedure AdjustFigureColors(Highlight: Boolean);
+    procedure AdjustBorderColors;
     procedure AdjustZOrder;
     procedure ShowTime;
     procedure BuildMonitorMenu;
@@ -83,11 +87,11 @@ begin
   FLabelTime[7] := Label8;
 
   FMonitorHandle := INVALID_HANDLE_VALUE;
+  ActionReverseColors.Checked := False;
 end;
 
 procedure TFormWallClock.FormShow(Sender: TObject);
 var
-  I: Integer;
   Monitor: TMonitor;
 begin
   if FInitialize = True then
@@ -103,14 +107,8 @@ begin
   end;
   AdjustPosition(FMonitorHandle);
   AdjustFigureColors(False);
-  for I := Low(FLabelTime) to High(FLabelTime) do
-  begin
-    FLabelTime[I].TextSettings.Decorations.StrokeColor := TAlphaColorRec.Alpha or TAlphaColor(BorderColor);
-  end;
-  LabelDate.TextSettings.Decorations.StrokeColor := TAlphaColorRec.Alpha or TAlphaColor(BorderColor);
+  AdjustBorderColors;
 
-  Color := BorderColor xor $010101;
-  TransparentColorValue := Color;
   ShowTime;
 end;
 
@@ -187,6 +185,12 @@ begin
   Close;
 end;
 
+procedure TFormWallClock.ActionReverseColorsExecute(Sender: TObject);
+begin
+  ActionReverseColors.Checked := not ActionReverseColors.Checked;
+  AdjustBorderColors;
+end;
+
 procedure TFormWallClock.CreateParams(var Params: TCreateParams);
 begin
   inherited;
@@ -249,7 +253,7 @@ var
 begin
   if Highlight = False then
   begin
-    AlphaColor := TAlphaColor(FigureColor);
+    AlphaColor := TAlphaColor(FigureColor[ActionReverseColors.Checked]);
   end
   else
   begin
@@ -262,6 +266,23 @@ begin
     FLabelTime[I].TextSettings.FontColor := AlphaColor;
   end;
   LabelDate.TextSettings.FontColor := AlphaColor;
+end;
+
+procedure TFormWallClock.AdjustBorderColors;
+var
+  I: Integer;
+  Reverse: Boolean;
+begin
+  Reverse := ActionReverseColors.Checked;
+
+  for I := Low(FLabelTime) to High(FLabelTime) do
+  begin
+    FLabelTime[I].TextSettings.Decorations.StrokeColor := TAlphaColorRec.Alpha or TAlphaColor(BorderColor[Reverse]);
+  end;
+  LabelDate.TextSettings.Decorations.StrokeColor := TAlphaColorRec.Alpha or TAlphaColor(BorderColor[Reverse]);
+
+  Color := BorderColor[Reverse] xor $010101;
+  TransparentColorValue := Color;
 end;
 
 procedure TFormWallClock.AdjustZOrder;
