@@ -59,10 +59,10 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1041</VerInfo_Locale>
         <VerInfo_MajorVer>1</VerInfo_MajorVer>
-        <VerInfo_MinorVer>1</VerInfo_MinorVer>
-        <VerInfo_Release>1</VerInfo_Release>
-        <VerInfo_Build>2</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=;FileDescription=Simple wall clock;FileVersion=1.1.1.2;InternalName=WallClock.exe;LegalCopyright=Copyright 2023 Owl&apos;s Perspective;OriginalFilename=WallClock.exe;ProductName=Wall clock;ProductVersion=1.1;Comments=</VerInfo_Keys>
+        <VerInfo_MinorVer>2</VerInfo_MinorVer>
+        <VerInfo_Release>0</VerInfo_Release>
+        <VerInfo_Build>3</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=Simple wall clock;FileVersion=1.2.0.3;InternalName=WallClock.exe;LegalCopyright=Copyright 2023 Owl&apos;s Perspective;OriginalFilename=WallClock.exe;ProductName=Wall clock;ProductVersion=1.2;Comments=</VerInfo_Keys>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
