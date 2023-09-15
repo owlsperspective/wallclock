@@ -26,9 +26,11 @@ type
     ActionList: TActionList;
     ActionExit: TAction;
     ActionReverseColors: TAction;
+    ActionIgnoreFullScreen: TAction;
     PopupMenu: TPopupMenu;
     MenuItemMonitors: TMenuItem;
     MenuItemReverseColors: TMenuItem;
+    MenuItemIgnoreFullScreen: TMenuItem;
     MenuItemExit: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -38,6 +40,7 @@ type
     procedure PopupMenuPopup(Sender: TObject);
     procedure ActionExitExecute(Sender: TObject);
     procedure ActionReverseColorsExecute(Sender: TObject);
+    procedure ActionIgnoreFullScreenExecute(Sender: TObject);
   private
     const
       FigureColor: array [Boolean] of TColor = ($6040A0, $DFFFD0);
@@ -124,7 +127,8 @@ begin
   begin
     FullScreenDetected := quns in [QUNS_BUSY,QUNS_RUNNING_D3D_FULL_SCREEN];
   end;
-  if Visible = FullScreenDetected then
+  if (Visible = FullScreenDetected) and
+     ((ActionIgnoreFullScreen.Checked = False) or (Visible = False)) then
   begin
     Visible := not FullScreenDetected;
     if Visible = True then
@@ -189,6 +193,11 @@ procedure TFormWallClock.ActionReverseColorsExecute(Sender: TObject);
 begin
   ActionReverseColors.Checked := not ActionReverseColors.Checked;
   AdjustBorderColors;
+end;
+
+procedure TFormWallClock.ActionIgnoreFullScreenExecute(Sender: TObject);
+begin
+  ActionIgnoreFullScreen.Checked := not ActionIgnoreFullScreen.Checked;
 end;
 
 procedure TFormWallClock.CreateParams(var Params: TCreateParams);

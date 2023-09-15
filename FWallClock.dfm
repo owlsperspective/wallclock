@@ -235,6 +235,10 @@ object FormWallClock: TFormWallClock
       Caption = #33394#12434#21453#36578'(&R)'
       OnExecute = ActionReverseColorsExecute
     end
+    object ActionIgnoreFullScreen: TAction
+      Caption = #12501#12523#12473#12463#12522#12540#12531#12434#28961#35222'(&I)'
+      OnExecute = ActionIgnoreFullScreenExecute
+    end
   end
   object PopupMenu: TPopupMenu
     OnPopup = PopupMenuPopup
@@ -245,6 +249,9 @@ object FormWallClock: TFormWallClock
     end
     object MenuItemReverseColors: TMenuItem
       Action = ActionReverseColors
+    end
+    object MenuItemIgnoreFullScreen: TMenuItem
+      Action = ActionIgnoreFullScreen
     end
     object MenuItemExit: TMenuItem
       Action = ActionExit
