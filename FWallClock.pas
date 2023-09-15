@@ -25,8 +25,10 @@ type
     TrayIcon: TTrayIcon;
     ActionList: TActionList;
     ActionExit: TAction;
+    ActionIgnoreFullScreen: TAction;
     PopupMenu: TPopupMenu;
     MenuItemMonitors: TMenuItem;
+    MenuItemIgnoreFullScreen: TMenuItem;
     MenuItemExit: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -35,6 +37,7 @@ type
     procedure TrayIconClick(Sender: TObject);
     procedure PopupMenuPopup(Sender: TObject);
     procedure ActionExitExecute(Sender: TObject);
+    procedure ActionIgnoreFullScreenExecute(Sender: TObject);
   private
     const
       FigureColor: TColor = $6040A0;
@@ -126,7 +129,8 @@ begin
   begin
     FullScreenDetected := quns in [QUNS_BUSY,QUNS_RUNNING_D3D_FULL_SCREEN];
   end;
-  if Visible = FullScreenDetected then
+  if (Visible = FullScreenDetected) and
+     ((ActionIgnoreFullScreen.Checked = False) or (Visible = False)) then
   begin
     Visible := not FullScreenDetected;
     if Visible = True then
@@ -185,6 +189,11 @@ end;
 procedure TFormWallClock.ActionExitExecute(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFormWallClock.ActionIgnoreFullScreenExecute(Sender: TObject);
+begin
+  ActionIgnoreFullScreen.Checked := not ActionIgnoreFullScreen.Checked;
 end;
 
 procedure TFormWallClock.CreateParams(var Params: TCreateParams);

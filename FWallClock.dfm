@@ -231,6 +231,10 @@ object FormWallClock: TFormWallClock
       Caption = #32066#20102'(&X)'
       OnExecute = ActionExitExecute
     end
+    object ActionIgnoreFullScreen: TAction
+      Caption = #12501#12523#12473#12463#12522#12540#12531#12434#28961#35222'(&I)'
+      OnExecute = ActionIgnoreFullScreenExecute
+    end
   end
   object PopupMenu: TPopupMenu
     OnPopup = PopupMenuPopup
@@ -238,6 +242,9 @@ object FormWallClock: TFormWallClock
     Top = 64
     object MenuItemMonitors: TMenuItem
       Caption = #12514#12491#12479'(&M)'
+    end
+    object MenuItemIgnoreFullScreen: TMenuItem
+      Action = ActionIgnoreFullScreen
     end
     object MenuItemExit: TMenuItem
       Action = ActionExit
