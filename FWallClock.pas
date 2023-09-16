@@ -57,8 +57,7 @@ type
     FMonitorHandle: THandle;
     procedure DoClickMonitor(Sender: TObject);
     procedure AdjustPosition(AMonitorHandle: THandle);
-    procedure AdjustFigureColors(Highlight: Boolean);
-    procedure AdjustBorderColors;
+    procedure AdjustColors(Highlight: Boolean);
     procedure AdjustZOrder;
     procedure ShowTime;
     procedure BuildMonitorMenu;
@@ -91,6 +90,7 @@ begin
 
   FMonitorHandle := INVALID_HANDLE_VALUE;
   ActionReverseColors.Checked := False;
+  ActionIgnoreFullScreen.Checked := False;
 end;
 
 procedure TFormWallClock.FormShow(Sender: TObject);
@@ -109,8 +109,7 @@ begin
     FMonitorHandle := Monitor.Handle;
   end;
   AdjustPosition(FMonitorHandle);
-  AdjustFigureColors(False);
-  AdjustBorderColors;
+  AdjustColors(False);
 
   ShowTime;
 end;
@@ -192,7 +191,6 @@ end;
 procedure TFormWallClock.ActionReverseColorsExecute(Sender: TObject);
 begin
   ActionReverseColors.Checked := not ActionReverseColors.Checked;
-  AdjustBorderColors;
 end;
 
 procedure TFormWallClock.ActionIgnoreFullScreenExecute(Sender: TObject);
@@ -255,11 +253,13 @@ begin
   SetBounds(WorkAreaRect.Right - Width,WorkAreaRect.Top,Width,Height);
 end;
 
-procedure TFormWallClock.AdjustFigureColors(Highlight: Boolean);
+procedure TFormWallClock.AdjustColors(Highlight: Boolean);
 var
   I: Integer;
   AlphaColor: TAlphaColor;
+  Reverse: Boolean;
 begin
+  { Font color }
   if Highlight = False then
   begin
     AlphaColor := TAlphaColor(FigureColor[ActionReverseColors.Checked]);
@@ -270,26 +270,25 @@ begin
   end;
   AlphaColor := TAlphaColorRec.Alpha or AlphaColor;
 
+  { Apply font color }
   for I := Low(FLabelTime) to High(FLabelTime) do
   begin
     FLabelTime[I].TextSettings.FontColor := AlphaColor;
   end;
   LabelDate.TextSettings.FontColor := AlphaColor;
-end;
 
-procedure TFormWallClock.AdjustBorderColors;
-var
-  I: Integer;
-  Reverse: Boolean;
-begin
+  { Border color }
   Reverse := ActionReverseColors.Checked;
+  AlphaColor := TAlphaColorRec.Alpha or TAlphaColor(BorderColor[Reverse]);
 
+  { Apply border color }
   for I := Low(FLabelTime) to High(FLabelTime) do
   begin
-    FLabelTime[I].TextSettings.Decorations.StrokeColor := TAlphaColorRec.Alpha or TAlphaColor(BorderColor[Reverse]);
+    FLabelTime[I].TextSettings.Decorations.StrokeColor := AlphaColor;
   end;
-  LabelDate.TextSettings.Decorations.StrokeColor := TAlphaColorRec.Alpha or TAlphaColor(BorderColor[Reverse]);
+  LabelDate.TextSettings.Decorations.StrokeColor := AlphaColor;
 
+  { Form color }
   Color := BorderColor[Reverse] xor $010101;
   TransparentColorValue := Color;
 end;
@@ -323,7 +322,7 @@ begin
   end;
 
   Highlight := ((ST.wMinute = 59) and (ST.wSecond >= 59)) or ((ST.wMinute = 0) and (ST.wSecond <= 1));
-  AdjustFigureColors(Highlight);
+  AdjustColors(Highlight);
 
   S := Format('%0:.4d-%1:.2d-%2:.2d (%3:s)',[ST.wYear,ST.wMonth,ST.wDay,CDOW[ST.wDayOfWeek]]);
   if LabelDate.Caption <> S then
