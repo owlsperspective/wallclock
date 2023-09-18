@@ -2,6 +2,7 @@
 
 uses
   Vcl.Forms,
+  FWallClockBase in 'FWallClockBase.pas' {FormWallClockBase},
   FWallClock in 'FWallClock.pas' {FormWallClock};
 
 {$R *.res}
