@@ -1,10 +1,16 @@
 ﻿![Screen shot](ScreenShot/GUI.png)
 # WallClock
+  https://github.com/owlsperspective/wallclock
+
 ## 概要
 - 設定機能も何もない、シンプルな壁時計です。起動するとメインモニタの右上に時刻と日付、曜日が表示されます。終了するときはタスクトレイアイコンを右クリックして終了を選択します。
 - 時計は24時間表記で、毎秒コロン(":")が点滅します。また毎正時の前後2秒間は文字の色が赤くなります。
 - 時計の表示はマウス操作を透過します。またマウスカーソルを時計の上に置くと、表示が見えなくならない程度に薄くなります。
 - 他のプログラムが(PowerPointのスライドショーのように)全画面表示したり、全画面のDirect3Dアプリケーションが実行されているときは非表示になります。
+
+## 実行環境
+- Windows
+  Windows 7/8/8.1/10/11で動作するはずです。
 
 ## 開発環境
 - RAD Stusio (Delphi) 11 Update 3 (11.3)<br />
@@ -18,7 +24,10 @@
     https://www.embarcadero.com/jp/products/delphi/starter
 
 ## 実行ファイル構成
-WallClock.exe(実行プログラム)とsk4d.dll(Skia4Delphi)を同一の場所に配置します。
+- 実行ファイル一式はGitHubからダウンロードできます。
+  https://github.com/owlsperspective/wallclock/releases
+
+- WallClock.exe(実行プログラム)とsk4d.dll(Skia4Delphi)を同一の場所に配置し、WallClock.exeを実行します。コマンドラインオプションはありません。
 
 ## 技術的なポイント
 ### マウス操作を透過
@@ -87,6 +96,10 @@ https://quality.embarcadero.com/browse/RSP-37708
 
 `WM_DISPLAYCHANGE`メッセージをハンドルすることでモニタの構成や解像度の変更を検知して、対象モニタや表示位置を再調整します。
 
+### 時計の表示とそれ以外の処理の分離
+時計の表示を変更したバリエーションを作成しやすいように、表示以外の処理を継承元フォーム`TFormWallClockBase`に、表示の処理を継承先フォーム`TFormWallClock`に、それぞれ分離しました。
+これにより`TFormWallClockBase`から継承したフォームをメインフォームとして、メソッド`Initialize`、`AdjustColors`、`DoShowTime`を`override`するだけで異なる表示のプログラムを簡単に作成できるようにしました。
+
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
 
@@ -106,3 +119,24 @@ https://licenses.opensource.jp/MIT/MIT.html
 
 Skia4DelphiはMITライセンスの元で公開されています。<br />
 https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
+
+## 更新履歴
+- Version 1.0.0 (2023-09-02)
+  - 初期バージョン
+
+- Version 1.1.0 (2023-09-10)
+  - マルチモニタ対応を改善。
+
+- Version 1.1.1 (2023-09-14)
+  - フルスクリーンのプログラムが検出されなくなったときにプライマリモニタが選択されてしまう不具合(issue #1)を修正。
+
+- Version 1.2.0 (2023-09-15)
+  - 視認性向上のため表示色の反転機能を追加。
+  - フルスクリーンでも非表示にしない機能を追加(issue #2)。
+
+- Version 1.2.1 (2023-09-16)
+  - 色を反転したときに一瞬正しくない色の組み合わせになる不具合を修正。
+
+- Version 1.2.2 (2023-09-18)
+  - 時計の表示とそれ以外の処理の分離。
+
