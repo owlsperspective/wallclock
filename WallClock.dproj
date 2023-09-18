@@ -93,6 +93,9 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="FWallClockBase.pas">
+            <Form>FormWallClockBase</Form>
+        </DCCReference>
         <DCCReference Include="FWallClock.pas">
             <Form>FormWallClock</Form>
             <FormType>dfm</FormType>
