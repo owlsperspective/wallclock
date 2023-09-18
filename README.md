@@ -1,4 +1,4 @@
-﻿![Screen shot](ScreenShot/GUI.png)
+﻿![Screen shot](ScreenShot/wallclock.png)
 # WallClock
   https://github.com/owlsperspective/wallclock
 
