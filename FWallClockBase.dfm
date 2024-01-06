@@ -51,10 +51,6 @@ object FormWallClockBase: TFormWallClockBase
       Caption = #32066#20102'(&X)'
       OnExecute = ActionExitExecute
     end
-    object ActionReverseColors: TAction
-      Caption = #33394#12434#21453#36578'(&R)'
-      OnExecute = ActionReverseColorsExecute
-    end
     object ActionIgnoreFullScreen: TAction
       Caption = #12501#12523#12473#12463#12522#12540#12531#12434#28961#35222'(&I)'
       OnExecute = ActionIgnoreFullScreenExecute
@@ -66,9 +62,6 @@ object FormWallClockBase: TFormWallClockBase
     Top = 64
     object MenuItemMonitors: TMenuItem
       Caption = #12514#12491#12479'(&M)'
-    end
-    object MenuItemReverseColors: TMenuItem
-      Action = ActionReverseColors
     end
     object MenuItemIgnoreFullScreen: TMenuItem
       Action = ActionIgnoreFullScreen
