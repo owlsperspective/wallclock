@@ -89,12 +89,12 @@ begin
   ShowTime;
 
   FullScreenDetected := False;
-  if SHQueryUserNotificationState(quns) = S_OK then
+  if (ActionIgnoreFullScreen.Checked = False) and (SHQueryUserNotificationState(quns) = S_OK) then
   begin
     FullScreenDetected := quns in [QUNS_BUSY,QUNS_RUNNING_D3D_FULL_SCREEN];
   end;
-  if (Visible = FullScreenDetected) and
-     ((ActionIgnoreFullScreen.Checked = False) or (Visible = False)) then
+
+  if Visible = FullScreenDetected then
   begin
     Visible := not FullScreenDetected;
     if Visible = True then
