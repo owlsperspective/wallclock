@@ -140,3 +140,6 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 - Version 1.2.2 (2023-09-18)
   - 時計の表示とそれ以外の処理の分離。
 
+- Version 1.2.3 (2024-01-06)
+  - フルスクリーンを無視の反映方法を変更(issue #3)。
+
