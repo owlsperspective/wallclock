@@ -9,6 +9,7 @@ uses
 
 type
   TFormWallClockBase = class(TForm)
+    TimerUpdate: TTimer;
     TimerFade: TTimer;
     TrayIcon: TTrayIcon;
     ActionList: TActionList;
