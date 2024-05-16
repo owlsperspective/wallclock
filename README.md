@@ -143,3 +143,6 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 - Version 1.2.3 (2024-01-06)
   - フルスクリーンを無視の反映方法を変更(issue #3)。
 
+- Version 1.2.4 (2024-05-16)
+  - TimerUpdateコンポーネントの定義がdfmにのみ存在し、pasファイルになかった不具合を修正(動作上は影響なし)。
+
