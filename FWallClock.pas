@@ -21,7 +21,10 @@ type
     Label7: TSkLabel;
     Label8: TSkLabel;
     LabelDate: TSkLabel;
+    ActionReverseColors: TAction;
+    MenuItemReverseColors: TMenuItem;
     procedure FormCreate(Sender: TObject);
+    procedure ActionReverseColorsExecute(Sender: TObject);
   private
     const
       FigureColor: array [Boolean] of TColor = ($6040A0, $DFFFD0);
@@ -53,6 +56,13 @@ begin
   FLabelTime[5] := Label6;
   FLabelTime[6] := Label7;
   FLabelTime[7] := Label8;
+
+  ActionReverseColors.Checked := False;
+end;
+
+procedure TFormWallClock.ActionReverseColorsExecute(Sender: TObject);
+begin
+  ActionReverseColors.Checked := not ActionReverseColors.Checked;
 end;
 
 procedure TFormWallClock.Initialize;

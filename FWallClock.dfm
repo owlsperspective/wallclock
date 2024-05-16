@@ -182,4 +182,15 @@ inherited FormWallClock: TFormWallClock
         StyledSettings = [Family, Size, Style, FontColor, Other]
       end>
   end
+  inherited ActionList: TActionList
+    object ActionReverseColors: TAction
+      Caption = #33394#12434#21453#36578'(&R)'
+      OnExecute = ActionReverseColorsExecute
+    end
+  end
+  inherited PopupMenu: TPopupMenu
+    object MenuItemReverseColors: TMenuItem [1]
+      Action = ActionReverseColors
+    end
+  end
 end

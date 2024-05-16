@@ -9,15 +9,14 @@ uses
 
 type
   TFormWallClockBase = class(TForm)
+    TimerUpdate: TTimer;
     TimerFade: TTimer;
     TrayIcon: TTrayIcon;
     ActionList: TActionList;
     ActionExit: TAction;
-    ActionReverseColors: TAction;
     ActionIgnoreFullScreen: TAction;
     PopupMenu: TPopupMenu;
     MenuItemMonitors: TMenuItem;
-    MenuItemReverseColors: TMenuItem;
     MenuItemIgnoreFullScreen: TMenuItem;
     MenuItemExit: TMenuItem;
     procedure FormCreate(Sender: TObject);
@@ -27,7 +26,6 @@ type
     procedure TrayIconClick(Sender: TObject);
     procedure PopupMenuPopup(Sender: TObject);
     procedure ActionExitExecute(Sender: TObject);
-    procedure ActionReverseColorsExecute(Sender: TObject);
     procedure ActionIgnoreFullScreenExecute(Sender: TObject);
   private
     const
@@ -64,7 +62,6 @@ begin
   FInitialized  := False;
 
   FMonitorHandle := INVALID_HANDLE_VALUE;
-  ActionReverseColors.Checked := False;
   ActionIgnoreFullScreen.Checked := False;
 end;
 
@@ -153,11 +150,6 @@ end;
 procedure TFormWallClockBase.ActionExitExecute(Sender: TObject);
 begin
   Close;
-end;
-
-procedure TFormWallClockBase.ActionReverseColorsExecute(Sender: TObject);
-begin
-  ActionReverseColors.Checked := not ActionReverseColors.Checked;
 end;
 
 procedure TFormWallClockBase.ActionIgnoreFullScreenExecute(Sender: TObject);
