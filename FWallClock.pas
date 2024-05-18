@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages,
   System.SysUtils, System.Variants, System.Classes, System.Actions, System.UITypes,
-  System.Skia,
+  System.Skia, System.Math,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
   Vcl.ActnList, Vcl.Menus, Vcl.Skia,
   FWallClockBase;
@@ -21,6 +21,7 @@ type
     Label7: TSkLabel;
     Label8: TSkLabel;
     LabelDate: TSkLabel;
+    LabelBatteryStatus: TSkLabel;
     ActionReverseColors: TAction;
     MenuItemReverseColors: TMenuItem;
     procedure FormCreate(Sender: TObject);
@@ -30,8 +31,14 @@ type
       FigureColor: array [Boolean] of TColor = ($6040A0, $DFFFD0);
       HighlightColor: TColor = $FF4B00;
       BorderColor: array [Boolean] of TColor = ($F0D0FF, $80A040);
+  private
+    FFormHeight: array [Boolean] of Integer;
+    procedure DoShowBatteryStatus;
+    class function DecodeSecond(Value: Integer): String;
   protected
     FLabelTime: array [0..7] of TSkLabel;
+    FBatteryUpdateInterval: Integer;
+    FBatteryUpdateCount: Integer;
     procedure Initialize; override;
     procedure AdjustColors(Highlight: Boolean); override;
     procedure DoShowTime(ST: TSystemTime); override;
@@ -58,6 +65,9 @@ begin
   FLabelTime[7] := Label8;
 
   ActionReverseColors.Checked := False;
+
+  FFormHeight[False] := LabelBatteryStatus.Top;
+  FFormHeight[True] := ClientHeight;
 end;
 
 procedure TFormWallClock.ActionReverseColorsExecute(Sender: TObject);
@@ -69,6 +79,9 @@ procedure TFormWallClock.Initialize;
 begin
   inherited;
   AdjustColors(False);
+
+  FBatteryUpdateInterval := (MSecsPerSec div 2) div TimerUpdate.Interval;
+  FBatteryUpdateCount := FBatteryUpdateInterval;
 end;
 
 procedure TFormWallClock.AdjustColors(Highlight: Boolean);
@@ -94,6 +107,7 @@ begin
     FLabelTime[I].TextSettings.FontColor := AlphaColor;
   end;
   LabelDate.TextSettings.FontColor := AlphaColor;
+  LabelBatteryStatus.TextSettings.FontColor := AlphaColor;
 
   { Border color }
   Reverse := ActionReverseColors.Checked;
@@ -105,6 +119,7 @@ begin
     FLabelTime[I].TextSettings.Decorations.StrokeColor := AlphaColor;
   end;
   LabelDate.TextSettings.Decorations.StrokeColor := AlphaColor;
+  LabelBatteryStatus.TextSettings.Decorations.StrokeColor := AlphaColor;
 
   { Form color }
   Color := BorderColor[Reverse] xor $010101;
@@ -143,6 +158,77 @@ begin
   TrayIcon.Hint := Application.Title + sLineBreak +
                    Format('%0:.4d-%1:.2d-%2:.2d (%3:s)' + sLineBreak + '%4:.2d:%5:.2d:%6:.2d',
                           [ST.wYear,ST.wMonth,ST.wDay,CDOW[ST.wDayOfWeek],ST.wHour,ST.wMinute,ST.wSecond]);
+
+  DoShowBatteryStatus;
+end;
+
+procedure TFormWallClock.DoShowBatteryStatus;
+var
+  SPS: TSystemPowerStatus;
+  Status: String;
+begin
+  if FBatteryUpdateCount < FBatteryUpdateInterval then
+  begin
+    FBatteryUpdateCount := FBatteryUpdateCount + 1;
+    Exit;
+  end;
+  FBatteryUpdateCount := 0;
+
+  FillChar(SPS,SizeOf(SPS),0);
+  if (GetSystemPowerStatus(SPS) = False) or
+     (SPS.ACLineStatus = AC_LINE_UNKNOWN) or
+     ((SPS.ACLineStatus = AC_LINE_ONLINE) and
+      (SPS.BatteryLifePercent = BATTERY_PERCENTAGE_UNKNOWN) and
+      (SPS.BatteryLifeTime = BATTERY_LIFE_UNKNOWN)) then
+  begin
+    { Resize (collapse) }
+    LabelBatteryStatus.Visible := False;
+    ClientHeight := FFormHeight[False];
+  end
+  else
+  begin
+    { Resize (expand) }
+    LabelBatteryStatus.Visible := True;
+    ClientHeight := FFormHeight[True];
+
+    { Battery life percent }
+    Status := '';
+    if SPS.BatteryLifePercent <> BATTERY_PERCENTAGE_UNKNOWN then
+    begin
+      Status := Format('%d%%',[SPS.BatteryLifePercent]);
+    end;
+
+    { Battery life time or AC line status }
+    if SPS.BatteryLifeTime <> BATTERY_LIFE_UNKNOWN then
+    begin
+      Status := Status + Format(' (%s)',[DecodeSecond(SPS.BatteryLifeTime)]);
+    end
+    else if SPS.ACLineStatus = AC_LINE_ONLINE then
+    begin
+      Status := Status + ' (AC)';
+    end;
+    LabelBatteryStatus.Caption := Status;
+  end;
+end;
+
+class function TFormWallClock.DecodeSecond(Value: Integer): String;
+var
+  DividedValue: Word;
+  Reminder: Word;
+begin
+  { Second (ignore) }
+  DivMod(Value,SecsPerMin,DividedValue,Reminder);
+
+  { Minute }
+  DivMod(DividedValue,MinsPerHour,DividedValue,Reminder);
+  Result := Format('%.2dm',[Reminder]);
+  if DividedValue = 0 then
+  begin
+    Exit;
+  end;
+
+  { Hour }
+  Result := Format('%dh',[DividedValue]) + Result;
 end;
 
 end.

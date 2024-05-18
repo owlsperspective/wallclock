@@ -1,5 +1,5 @@
 inherited FormWallClock: TFormWallClock
-  ClientHeight = 112
+  ClientHeight = 144
   ClientWidth = 224
   TextHeight = 15
   object Label1: TSkLabel [0]
@@ -179,6 +179,26 @@ inherited FormWallClock: TFormWallClock
     Words = <
       item
         Caption = '9999-99-99 (XXX)'
+        StyledSettings = [Family, Size, Style, FontColor, Other]
+      end>
+  end
+  object LabelBatteryStatus: TSkLabel [9]
+    Left = 16
+    Top = 104
+    Width = 192
+    Height = 32
+    AutoSize = False
+    TextSettings.Decorations.StrokeColor = claWhite
+    TextSettings.Decorations.Thickness = 0.500000000000000000
+    TextSettings.Font.Families = 'Calibri'
+    TextSettings.Font.Size = 24.000000000000000000
+    TextSettings.Font.Weight = Semibold
+    TextSettings.FontColor = claWhite
+    TextSettings.HorzAlign = Trailing
+    TextSettings.Trimming = None
+    Words = <
+      item
+        Caption = '100% (99h99m)'
         StyledSettings = [Family, Size, Style, FontColor, Other]
       end>
   end
