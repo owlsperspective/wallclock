@@ -7,6 +7,7 @@
 - 時計は24時間表記で、毎秒コロン(":")が点滅します。また毎正時の前後2秒間は文字の色が赤くなります。
 - 時計の表示はマウス操作を透過します。またマウスカーソルを時計の上に置くと、表示が見えなくならない程度に薄くなります。
 - 他のプログラムが(PowerPointのスライドショーのように)全画面表示したり、全画面のDirect3Dアプリケーションが実行されているときは非表示になります。
+- ノートPCではバッテリステータス(残量、残り時間)を表示します(Version 1.3以降)。
 
 ## 実行環境
 - Windows
@@ -100,6 +101,18 @@ https://quality.embarcadero.com/browse/RSP-37708
 時計の表示を変更したバリエーションを作成しやすいように、表示以外の処理を継承元フォーム`TFormWallClockBase`に、表示の処理を継承先フォーム`TFormWallClock`に、それぞれ分離しました。
 これにより`TFormWallClockBase`から継承したフォームをメインフォームとして、メソッド`Initialize`、`AdjustColors`、`DoShowTime`を`override`するだけで異なる表示のプログラムを簡単に作成できるようにしました。
 
+### バッテリステータスの表示(Version 1.3)
+ノートPCではバッテリの残量と残り時間を表示します。
+
+GetSystemPowerStatus function (winbase.h) - Win32 apps | Microsoft Learn<br />
+https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getsystempowerstatus
+
+SYSTEM_POWER_STATUS (winbase.h) - Win32 apps | Microsoft Learn<br />
+https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-system_power_status
+
+Win32APIの`GetSystemPowerStatus`で取得した`SYSTEM_POWER_STATUS`構造体の`ACLineStatus`が`AC_LINE_ONLINE`かつ`BatteryLifePercent`が`BATTERY_PERCENTAGE_UNKNOWN`かつ`BatteryLifeTime`が`BATTERY_LIFE_UNKNOWN`のときはデスクトップPCと見なしてバッテリステータスを非表示にします。
+一方`BatteryLifePercent`が`BATTERY_PERCENTAGE_UNKNOWN`以外または`BatteryLifeTime`が`BATTERY_LIFE_UNKNOWN`以外のときはノートPCと見なしてバッテリステータスを表示します。
+
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
 
@@ -109,7 +122,7 @@ https://quality.embarcadero.com/browse/RSP-37708
 ## ライセンス
 このプログラムに固有のコードについてはMITライセンスが適用されます。
 
-Copyright 2023 Owl's Perspective
+Copyright 2023-2024 Owl's Perspective
 
 The MIT License – Open Source Initiative<br />
 https://opensource.org/license/mit/
@@ -145,4 +158,7 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 
 - Version 1.2.4 (2024-05-16)
   - TimerUpdateコンポーネントの定義がdfmにのみ存在し、pasファイルになかった不具合を修正(動作上は影響なし)。
+
+- Version 1.3.0 (2024-05-18)
+  - ノートPCでバッテリステータスを表示する機能を追加。
 
