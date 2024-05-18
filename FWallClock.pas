@@ -31,6 +31,10 @@ type
       FigureColor: array [Boolean] of TColor = ($6040A0, $DFFFD0);
       HighlightColor: TColor = $FF4B00;
       BorderColor: array [Boolean] of TColor = ($F0D0FF, $80A040);
+  private
+    FFormHeight: array [Boolean] of Integer;
+    procedure DoShowBatteryStatus;
+    class function DecodeSecond(Value: Integer): String;
   protected
     FLabelTime: array [0..7] of TSkLabel;
     FBatteryUpdateInterval: Integer;
@@ -38,8 +42,6 @@ type
     procedure Initialize; override;
     procedure AdjustColors(Highlight: Boolean); override;
     procedure DoShowTime(ST: TSystemTime); override;
-    procedure DoShowBatteryStatus;
-    class function DecodeSecond(Value: Integer): String;
   end;
 
 var
@@ -63,6 +65,9 @@ begin
   FLabelTime[7] := Label8;
 
   ActionReverseColors.Checked := False;
+
+  FFormHeight[False] := LabelBatteryStatus.Top;
+  FFormHeight[True] := ClientHeight;
 end;
 
 procedure TFormWallClock.ActionReverseColorsExecute(Sender: TObject);
@@ -170,25 +175,30 @@ begin
   FBatteryUpdateCount := 0;
 
   FillChar(SPS,SizeOf(SPS),0);
-  if GetSystemPowerStatus(SPS) = False then
+  if (GetSystemPowerStatus(SPS) = False) or
+     (SPS.ACLineStatus = AC_LINE_UNKNOWN) or
+     ((SPS.ACLineStatus = AC_LINE_ONLINE) and
+      (SPS.BatteryLifePercent = BATTERY_PERCENTAGE_UNKNOWN) and
+      (SPS.BatteryLifeTime = BATTERY_LIFE_UNKNOWN)) then
   begin
-    Exit;
-  end;
-
-  if (SPS.ACLineStatus = AC_LINE_ONLINE) and
-     (SPS.BatteryLifePercent = BATTERY_PERCENTAGE_UNKNOWN) and
-     (SPS.BatteryLifeTime = BATTERY_LIFE_UNKNOWN) then
-  begin
+    { Resize (collapse) }
     LabelBatteryStatus.Visible := False;
+    ClientHeight := FFormHeight[False];
   end
   else
   begin
+    { Resize (expand) }
     LabelBatteryStatus.Visible := True;
+    ClientHeight := FFormHeight[True];
+
+    { Battery life percent }
     Status := '';
     if SPS.BatteryLifePercent <> BATTERY_PERCENTAGE_UNKNOWN then
     begin
       Status := Format('%d%%',[SPS.BatteryLifePercent]);
     end;
+
+    { Battery life time or AC line status }
     if SPS.BatteryLifeTime <> BATTERY_LIFE_UNKNOWN then
     begin
       Status := Status + Format(' (%s)',[DecodeSecond(SPS.BatteryLifeTime)]);

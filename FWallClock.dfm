@@ -198,7 +198,7 @@ inherited FormWallClock: TFormWallClock
     TextSettings.Trimming = None
     Words = <
       item
-        Caption = '100 % (99h99m)'
+        Caption = '100% (99h99m)'
         StyledSettings = [Family, Size, Style, FontColor, Other]
       end>
   end
