@@ -103,9 +103,12 @@ begin
   if (Mouse.CursorPos.X >= Left) and (Mouse.CursorPos.X < (Left + ClientWidth)) and
      (Mouse.CursorPos.Y >= Top)  and (Mouse.CursorPos.Y < (Top  + ClientHeight)) then
   begin
-    { Fade out }
-    FFadeDelta := FadeOutDelta;
-    TimerFade.Enabled := True;
+    if AlphaBlendValue > MinAlphaBlendValue then
+    begin
+      { Fade out }
+      FFadeDelta := FadeOutDelta;
+      TimerFade.Enabled := True;
+    end;
   end
   else
   begin
