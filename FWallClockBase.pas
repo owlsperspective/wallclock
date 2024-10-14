@@ -103,13 +103,21 @@ begin
   if (Mouse.CursorPos.X >= Left) and (Mouse.CursorPos.X < (Left + ClientWidth)) and
      (Mouse.CursorPos.Y >= Top)  and (Mouse.CursorPos.Y < (Top  + ClientHeight)) then
   begin
-    { Fade out }
-    FFadeDelta := FadeOutDelta;
-    TimerFade.Enabled := True;
+    if AlphaBlendValue > MinAlphaBlendValue then
+    begin
+      if TimerFade.Enabled = False then
+      begin
+        AdjustZOrder;
+      end;
+
+      { Fade out }
+      FFadeDelta := FadeOutDelta;
+      TimerFade.Enabled := True;
+    end;
   end
   else
   begin
-    if AlphaBlendValue < 255 then
+    if AlphaBlendValue < MaxAlphaBlendValue then
     begin
       { Fade in }
       FFadeDelta := FadeInDelta;
