@@ -105,6 +105,11 @@ begin
   begin
     if AlphaBlendValue > MinAlphaBlendValue then
     begin
+      if TimerFade.Enabled = False then
+      begin
+        AdjustZOrder;
+      end;
+
       { Fade out }
       FFadeDelta := FadeOutDelta;
       TimerFade.Enabled := True;
