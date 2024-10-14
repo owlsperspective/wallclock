@@ -162,3 +162,6 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 - Version 1.3.0 (2024-05-18)
   - ノートPCでバッテリステータスを表示する機能を追加。
 
+- Version 1.3.1 (2024-10-14)
+  - カーソルがフォーム上に入ったときにZオーダを最前面に移動するように変更。
+
