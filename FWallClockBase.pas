@@ -109,7 +109,7 @@ begin
   end
   else
   begin
-    if AlphaBlendValue < 255 then
+    if AlphaBlendValue < MaxAlphaBlendValue then
     begin
       { Fade in }
       FFadeDelta := FadeInDelta;
