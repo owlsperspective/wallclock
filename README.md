@@ -113,6 +113,20 @@ https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-system_po
 Win32APIの`GetSystemPowerStatus`で取得した`SYSTEM_POWER_STATUS`構造体の`ACLineStatus`が`AC_LINE_ONLINE`かつ`BatteryLifePercent`が`BATTERY_PERCENTAGE_UNKNOWN`かつ`BatteryLifeTime`が`BATTERY_LIFE_UNKNOWN`のときはデスクトップPCと見なしてバッテリステータスを非表示にします。
 一方`BatteryLifePercent`が`BATTERY_PERCENTAGE_UNKNOWN`以外または`BatteryLifeTime`が`BATTERY_LIFE_UNKNOWN`以外のときはノートPCと見なしてバッテリステータスを表示します。
 
+### エクスプローラ再起動時にアプリケーションがタスクバー上に表示されないようにする
+Windowsのシェルであるエクスプローラがクラッシュしたりなんらかのツールで設定変更の反映のために再起動されると、せっかく非表示にしたアプリケーション/メインフォームがタスクバー上に表示されてしまいます。そこでタスクバーが(再)作成されるときに送信される`TaskbarCreated`メッセージをハンドルします。このメッセージはIE4のシェル機能で追加されたため`WM_`という形式で定義されておらず、Win32APIの`RegisterWindowMessage`で対応するメッセージを取得する必要があります。
+
+Taskbar Creation Notification (The Taskbar - Win32 apps | Microsoft Learn)
+https://learn.microsoft.com/en-us/windows/win32/shell/taskbar#taskbar-creation-notification
+
+RegisterWindowMessageW function (winuser.h) - Win32 apps | Microsoft Learn
+https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-registerwindowmessagew
+
+フォームのウィンドウプロシージャ`WndProc`をオーバライドし、`TaskbarCreated`メッセージを受信したらフォームの`RecreateWnd`を呼び出してウィンドウを再生成することで、`CreateParams`メソッドをオーバライドして設定される`Params.ExStyle`によってタスクバー上に表示されないようにします。
+
+Vcl.Controls.TWinControl.RecreateWnd - RAD Studio API Documentation
+https://docwiki.embarcadero.com/Libraries/ja/Vcl.Controls.TWinControl.RecreateWnd
+
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
 
@@ -164,4 +178,7 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 
 - Version 1.3.1 (2024-10-14)
   - カーソルがフォーム上に入ったときにZオーダを最前面に移動するように変更。
+
+- Version 1.3.2 (2024-11-14)
+  - エクスプローラが再起動してタスクバーが再作成されたときにアプリケーションがタスクバー上に表示されないように変更。
 

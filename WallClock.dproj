@@ -60,9 +60,9 @@
         <VerInfo_Locale>1041</VerInfo_Locale>
         <VerInfo_MajorVer>1</VerInfo_MajorVer>
         <VerInfo_MinorVer>3</VerInfo_MinorVer>
-        <VerInfo_Release>1</VerInfo_Release>
-        <VerInfo_Build>9</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=;FileDescription=Simple wall clock;FileVersion=1.3.1.9;InternalName=WallClock.exe;LegalCopyright=Copyright 2023-2024 Owl&apos;s Perspective;OriginalFilename=WallClock.exe;ProductName=Wall clock;ProductVersion=1.3;Comments=</VerInfo_Keys>
+        <VerInfo_Release>2</VerInfo_Release>
+        <VerInfo_Build>10</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=Simple wall clock;FileVersion=1.3.2.10;InternalName=WallClock.exe;LegalCopyright=Copyright 2023-2024 Owl&apos;s Perspective;OriginalFilename=WallClock.exe;ProductName=Wall clock;ProductVersion=1.3;Comments=</VerInfo_Keys>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
@@ -73,9 +73,9 @@
         <VerInfo_Locale>1041</VerInfo_Locale>
         <VerInfo_MajorVer>1</VerInfo_MajorVer>
         <VerInfo_MinorVer>3</VerInfo_MinorVer>
-        <VerInfo_Release>1</VerInfo_Release>
-        <VerInfo_Build>9</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=;FileDescription=Simple wall clock;FileVersion=1.3.1.9;InternalName=WallClock.exe;LegalCopyright=Copyright 2023-2024 Owl&apos;s Perspective;OriginalFilename=WallClock.exe;ProductName=Wall clock;ProductVersion=1.3;Comments=</VerInfo_Keys>
+        <VerInfo_Release>2</VerInfo_Release>
+        <VerInfo_Build>10</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=Simple wall clock;FileVersion=1.3.2.10;InternalName=WallClock.exe;LegalCopyright=Copyright 2023-2024 Owl&apos;s Perspective;OriginalFilename=WallClock.exe;ProductName=Wall clock;ProductVersion=1.3;Comments=</VerInfo_Keys>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
