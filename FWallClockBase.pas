@@ -36,6 +36,7 @@ type
   private
     FFadeDelta: Integer;
     FMonitorHandle: THandle;
+    FTaskbarCreatedMsg: UINT;
     procedure DoClickMonitor(Sender: TObject);
     procedure AdjustPosition(AMonitorHandle: THandle);
     procedure AdjustZOrder;
@@ -44,6 +45,7 @@ type
   protected
     FInitialized: Boolean;
     procedure CreateParams(var Params: TCreateParams); override;
+    procedure WndProc(var Message: TMessage); override;
     procedure Initialize; virtual;
     procedure AdjustColors(Highlight: Boolean); virtual; abstract;
     procedure ShowTime;
@@ -63,6 +65,8 @@ begin
 
   FMonitorHandle := INVALID_HANDLE_VALUE;
   ActionIgnoreFullScreen.Checked := False;
+
+  FTaskbarCreatedMsg := RegisterWindowMessage('TaskbarCreated');
 end;
 
 procedure TFormWallClockBase.FormShow(Sender: TObject);
@@ -174,6 +178,20 @@ procedure TFormWallClockBase.CreateParams(var Params: TCreateParams);
 begin
   inherited;
   Params.ExStyle := (Params.ExStyle or WS_EX_TRANSPARENT or WS_EX_NOACTIVATE) and not WS_EX_APPWINDOW;
+end;
+
+procedure TFormWallClockBase.WndProc(var Message: TMessage);
+begin
+  if Message.Msg = FTaskbarCreatedMsg then
+  begin
+    TThread.ForceQueue(nil,
+      procedure
+      begin
+        RecreateWnd;
+      end);
+  end;
+
+  inherited;
 end;
 
 procedure TFormWallClockBase.Initialize;
