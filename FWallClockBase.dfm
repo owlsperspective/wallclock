@@ -48,19 +48,19 @@ object FormWallClockBase: TFormWallClockBase
     Left = 72
     Top = 64
     object ActionExit: TAction
-      Caption = #32066#20102'(&X)'
+      Caption = 'E&xit'
       OnExecute = ActionExitExecute
     end
     object ActionIgnoreFullScreen: TAction
-      Caption = #12501#12523#12473#12463#12522#12540#12531#12434#28961#35222'(&I)'
+      Caption = '&Ignore full screen'
       OnExecute = ActionIgnoreFullScreenExecute
     end
     object ActionRegisterRunAtLogin: TAction
-      Caption = #12524#12472#12473#12488#12522#12395#30331#37682#12377#12427'(&R)'
+      Caption = '&Register to registry'
       OnExecute = ActionRegisterRunAtLoginExecute
     end
     object ActionUnregisterRunAtLogin: TAction
-      Caption = #12524#12472#12473#12488#12522#12363#12425#30331#37682#35299#38500#12377#12427'(&U)'
+      Caption = '&Unregister from registry'
       OnExecute = ActionUnregisterRunAtLoginExecute
     end
   end
@@ -69,13 +69,13 @@ object FormWallClockBase: TFormWallClockBase
     Left = 128
     Top = 64
     object MenuItemMonitors: TMenuItem
-      Caption = #12514#12491#12479'(&M)'
+      Caption = '&Monitor'
     end
     object MenuItemIgnoreFullScreen: TMenuItem
       Action = ActionIgnoreFullScreen
     end
     object MenuItemRunAtLogin: TMenuItem
-      Caption = #12525#12464#12452#12531#26178#12395#36215#21205'(&L)'
+      Caption = 'Run at &Login'
       object MenuItemRegisterRunAtLogin: TMenuItem
         Action = ActionRegisterRunAtLogin
       end
