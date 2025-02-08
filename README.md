@@ -14,11 +14,12 @@
   Windows 7/8/8.1/10/11で動作するはずです。
 
 ## 開発環境
-- RAD Stusio (Delphi) 11 Update 3 (11.3)<br />
+- RAD Stusio (Delphi) 12 Athens Update 2 (12.2)<br />
   https://www.embarcadero.com/jp/products/delphi
-- Skia4Delphi 6.0.0 beta 3<br />
+- Skia4Delphi<br />
   https://skia4delphi.org/<br />
-  https://github.com/skia4delphi/skia4delphi
+  https://github.com/skia4delphi/skia4delphi<br />
+  Delphi 12 Athensおよびそれ以降ではSkia4Delphiは標準でバンドルされています。Delphi 11 Alexandriaおよびそれ以前の場合はSkia4Delphiを追加でインストールしてください。
 - 基本的にSkia4Delphiに対応しているDelphi XE7以降のバージョンであればコンパイルできるはずです。またCommunity Editionを含む全てのSKUでコンパイルできます。
 
     Delphi Community Edition - エンバカデロ・テクノロジーズ<br />
@@ -136,7 +137,7 @@ https://docwiki.embarcadero.com/Libraries/ja/Vcl.Controls.TWinControl.RecreateWn
 ## ライセンス
 このプログラムに固有のコードについてはMITライセンスが適用されます。
 
-Copyright 2023-2024 Owl's Perspective
+Copyright 2023-2025 Owl's Perspective
 
 The MIT License – Open Source Initiative<br />
 https://opensource.org/license/mit/
@@ -182,3 +183,5 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 - Version 1.3.2 (2024-11-14)
   - エクスプローラが再起動してタスクバーが再作成されたときにアプリケーションがタスクバー上に表示されないように変更。
 
+- Version 1.4.0 (2025-02-08)
+  - 開発環境をDelphi 12.2 Athensに変更。
