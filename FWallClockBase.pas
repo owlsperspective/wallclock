@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, Winapi.ShellAPI,
-  System.SysUtils, System.Variants, System.Classes, System.Actions,
+  System.SysUtils, System.Variants, System.Classes, System.Actions, System.Win.Registry,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Menus, Vcl.ActnList;
 
 type
@@ -15,10 +15,15 @@ type
     ActionList: TActionList;
     ActionExit: TAction;
     ActionIgnoreFullScreen: TAction;
+    ActionRegisterRunAtLogin: TAction;
+    ActionUnregisterRunAtLogin: TAction;
     PopupMenu: TPopupMenu;
     MenuItemMonitors: TMenuItem;
     MenuItemIgnoreFullScreen: TMenuItem;
     MenuItemExit: TMenuItem;
+    MenuItemRunAtLogin: TMenuItem;
+    MenuItemRegisterRunAtLogin: TMenuItem;
+    MenuItemUnregisterRunAtLogin: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure TimerUpdateTimer(Sender: TObject);
@@ -27,12 +32,15 @@ type
     procedure PopupMenuPopup(Sender: TObject);
     procedure ActionExitExecute(Sender: TObject);
     procedure ActionIgnoreFullScreenExecute(Sender: TObject);
+    procedure ActionRegisterRunAtLoginExecute(Sender: TObject);
+    procedure ActionUnregisterRunAtLoginExecute(Sender: TObject);
   private
     const
       FadeOutDelta: Integer = -10;
       FadeInDelta: Integer = 20;
       MinAlphaBlendValue: Integer =  80;
       MaxAlphaBlendValue: Integer = 255;
+      REGKEY_RUN = 'Software\Microsoft\Windows\CurrentVersion\Run';
   private
     FFadeDelta: Integer;
     FMonitorHandle: THandle;
@@ -42,6 +50,9 @@ type
     procedure AdjustZOrder;
     procedure BuildMonitorMenu;
     procedure RefreshMonitors;
+    function  RegisterRunAtLogin: Boolean;
+    function  UnregisterRunAtLogin: Boolean;
+    function  IsRegisteredRunAtLogin: Boolean;
   protected
     FInitialized: Boolean;
     procedure CreateParams(var Params: TCreateParams); override;
@@ -169,6 +180,24 @@ begin
   ActionIgnoreFullScreen.Checked := not ActionIgnoreFullScreen.Checked;
 end;
 
+procedure TFormWallClockBase.ActionRegisterRunAtLoginExecute(Sender: TObject);
+begin
+  if RegisterRunAtLogin = True then
+  begin
+    ActionRegisterRunAtLogin.Enabled := False;
+    ActionUnregisterRunAtLogin.Enabled := True;
+  end;
+end;
+
+procedure TFormWallClockBase.ActionUnregisterRunAtLoginExecute(Sender: TObject);
+begin
+  if UnregisterRunAtLogin = True then
+  begin
+    ActionRegisterRunAtLogin.Enabled := True;
+    ActionUnregisterRunAtLogin.Enabled := False;
+  end;
+end;
+
 procedure TFormWallClockBase.WmDisplayChange(var Message: TWMDisplayChange);
 begin
   AdjustPosition(FMonitorHandle);
@@ -197,6 +226,7 @@ end;
 procedure TFormWallClockBase.Initialize;
 var
   Monitor: TMonitor;
+  IsRegistered: Boolean;
 begin
   Monitor := Screen.PrimaryMonitor;
   if Monitor <> nil then
@@ -205,6 +235,10 @@ begin
   end;
   AdjustPosition(FMonitorHandle);
   AdjustColors(False);
+
+  IsRegistered := IsRegisteredRunAtLogin;
+  ActionRegisterRunAtLogin.Enabled := not IsRegistered;
+  ActionUnregisterRunAtLogin.Enabled := IsRegistered;
 end;
 
 procedure TFormWallClockBase.ShowTime;
@@ -308,6 +342,83 @@ end;
 procedure TFormWallClockBase.RefreshMonitors;
 begin
   SendMessage(Application.Handle,WM_WTSSESSION_CHANGE,0,0);  // Force call Screen.GetMonitors. See https://quality.embarcadero.com/browse/RSP-37708
+end;
+
+function TFormWallClockBase.RegisterRunAtLogin: Boolean;
+var
+  Registry: TRegistry;
+  AppPath: String;
+begin
+  Result := False;
+  Registry := TRegistry.Create(KEY_WRITE);
+  try
+    Registry.RootKey := HKEY_CURRENT_USER;
+    if Registry.OpenKey(REGKEY_RUN,True) = False then
+    begin
+      Exit;
+    end;
+    try
+      AppPath := ParamStr(0);
+      Registry.WriteString(ChangeFileExt(ExtractFileName(AppPath),''),AppPath);
+      Result := True;
+    finally
+      Registry.CloseKey;
+    end;
+  finally
+    Registry.Free;
+  end;
+end;
+
+function TFormWallClockBase.UnregisterRunAtLogin: Boolean;
+var
+  Registry: TRegistry;
+  AppName: String;
+begin
+  Result := False;
+  Registry := TRegistry.Create(KEY_WRITE or KEY_READ);
+  try
+    Registry.RootKey := HKEY_CURRENT_USER;
+    if Registry.OpenKey(REGKEY_RUN,False) = False then
+    begin
+      Exit;
+    end;
+    try
+      AppName := ChangeFileExt(ExtractFileName(ParamStr(0)),'');
+      Result := not Registry.ValueExists(AppName);
+      if Result = False then
+      begin
+        Result := Registry.DeleteValue(AppName);
+      end;
+    finally
+      Registry.CloseKey;
+    end;
+  finally
+    Registry.Free;
+  end;
+end;
+
+function TFormWallClockBase.IsRegisteredRunAtLogin: Boolean;
+var
+  Registry: TRegistry;
+  AppName: String;
+begin
+  Result := False;
+  Registry := TRegistry.Create(KEY_READ);
+  try
+    Registry.RootKey := HKEY_CURRENT_USER;
+    if Registry.OpenKeyReadOnly(REGKEY_RUN) = False then
+    begin
+      Exit;
+    end;
+    try
+      AppName := ChangeFileExt(ExtractFileName(ParamStr(0)),'');
+      Result := Registry.ValueExists(AppName);
+    finally
+      Registry.CloseKey;
+    end;
+  finally
+    Registry.Free;
+  end;
 end;
 
 end.

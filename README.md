@@ -8,6 +8,7 @@
 - 時計の表示はマウス操作を透過します。またマウスカーソルを時計の上に置くと、表示が見えなくならない程度に薄くなります。
 - 他のプログラムが(PowerPointのスライドショーのように)全画面表示したり、全画面のDirect3Dアプリケーションが実行されているときは非表示になります。
 - ノートPCではバッテリステータス(残量、残り時間)を表示します(Version 1.3以降)。
+- ログイン時に起動する設定をコンテキストメニューからレジストリに登録/登録解除できます(Version 1.4以降)。
 
 ## 実行環境
 - Windows
@@ -114,7 +115,7 @@ https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-system_po
 Win32APIの`GetSystemPowerStatus`で取得した`SYSTEM_POWER_STATUS`構造体の`ACLineStatus`が`AC_LINE_ONLINE`かつ`BatteryLifePercent`が`BATTERY_PERCENTAGE_UNKNOWN`かつ`BatteryLifeTime`が`BATTERY_LIFE_UNKNOWN`のときはデスクトップPCと見なしてバッテリステータスを非表示にします。
 一方`BatteryLifePercent`が`BATTERY_PERCENTAGE_UNKNOWN`以外または`BatteryLifeTime`が`BATTERY_LIFE_UNKNOWN`以外のときはノートPCと見なしてバッテリステータスを表示します。
 
-### エクスプローラ再起動時にアプリケーションがタスクバー上に表示されないようにする
+### エクスプローラ再起動時にアプリケーションがタスクバー上に表示されないようにする(Version 1.3)
 Windowsのシェルであるエクスプローラがクラッシュしたりなんらかのツールで設定変更の反映のために再起動されると、せっかく非表示にしたアプリケーション/メインフォームがタスクバー上に表示されてしまいます。そこでタスクバーが(再)作成されるときに送信される`TaskbarCreated`メッセージをハンドルします。このメッセージはIE4のシェル機能で追加されたため`WM_`という形式で定義されておらず、Win32APIの`RegisterWindowMessage`で対応するメッセージを取得する必要があります。
 
 Taskbar Creation Notification (The Taskbar - Win32 apps | Microsoft Learn)
@@ -127,6 +128,11 @@ https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-registerw
 
 Vcl.Controls.TWinControl.RecreateWnd - RAD Studio API Documentation
 https://docwiki.embarcadero.com/Libraries/ja/Vcl.Controls.TWinControl.RecreateWnd
+
+### ログイン時に起動する設定をレジストリに登録する(Version 1.4)
+レジストリの`HKEY_CURRENT_USER\Software\Microsoft\Windows\Run`にプログラムのコマンドラインを登録することで、現在のユーザのログイン時にプログラムを起動するようにします(この設定はユーザアカウント別です)。
+
+https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys
 
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
@@ -185,3 +191,5 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 
 - Version 1.4.0 (2025-02-08)
   - 開発環境をDelphi 12.2 Athensに変更。
+  - ログイン時に起動するようレジストリ上に登録/登録解除する機能を追加。
+

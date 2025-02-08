@@ -55,6 +55,14 @@ object FormWallClockBase: TFormWallClockBase
       Caption = #12501#12523#12473#12463#12522#12540#12531#12434#28961#35222'(&I)'
       OnExecute = ActionIgnoreFullScreenExecute
     end
+    object ActionRegisterRunAtLogin: TAction
+      Caption = #12524#12472#12473#12488#12522#12395#30331#37682#12377#12427'(&R)'
+      OnExecute = ActionRegisterRunAtLoginExecute
+    end
+    object ActionUnregisterRunAtLogin: TAction
+      Caption = #12524#12472#12473#12488#12522#12363#12425#30331#37682#35299#38500#12377#12427'(&U)'
+      OnExecute = ActionUnregisterRunAtLoginExecute
+    end
   end
   object PopupMenu: TPopupMenu
     OnPopup = PopupMenuPopup
@@ -65,6 +73,15 @@ object FormWallClockBase: TFormWallClockBase
     end
     object MenuItemIgnoreFullScreen: TMenuItem
       Action = ActionIgnoreFullScreen
+    end
+    object MenuItemRunAtLogin: TMenuItem
+      Caption = #12525#12464#12452#12531#26178#12395#36215#21205'(&L)'
+      object MenuItemRegisterRunAtLogin: TMenuItem
+        Action = ActionRegisterRunAtLogin
+      end
+      object MenuItemUnregisterRunAtLogin: TMenuItem
+        Action = ActionUnregisterRunAtLogin
+      end
     end
     object MenuItemExit: TMenuItem
       Action = ActionExit
