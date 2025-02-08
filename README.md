@@ -10,6 +10,7 @@
 - ノートPCではバッテリステータス(残量、残り時間)を表示します(Version 1.3以降)。
 - ログイン時に起動する設定をコンテキストメニューからレジストリに登録/登録解除できます(Version 1.4以降)。
 - BTM(Better Translation Manager)による国際化対応(Version 1.4以降)
+- Advanced Installerによるインストーラの追加(Version 1.4以降)
 
 ## 実行環境
 - Windows
@@ -28,13 +29,17 @@
     https://www.embarcadero.com/jp/products/delphi/starter
 - Better Translation Manager<br />
   https://bitbucket.org/anders_melander/better-translation-manager/
-
+- Advanced Installer<br />
+  https://www.advancedinstaller.com/<br />
+  Advanced Installerは商用製品ですが、非営利利用であればFreeware Editionを使用できます。
 
 ## 実行ファイル構成
 - 実行ファイル一式はGitHubからダウンロードできます。
   https://github.com/owlsperspective/wallclock/releases
 
 - WallClock.exe(実行プログラム)とsk4d.dll(Skia4Delphi)を同一の場所に配置し、WallClock.exeを実行します。コマンドラインオプションはありません。
+
+- Version 1.4.0以降ではインストーラによるインストールもサポートされています。
 
 ## 技術的なポイント
 ### マウス操作を透過
@@ -141,13 +146,31 @@ https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registr
 ### 国際化対応(Version 1.4)
 Delphi標準だったトランスレーションツールがDelphi 10.3 Rioでdeprecatedになり、さらにDelphi 12 AthensではGetIt経由でのインストールになったことに加え、手元の環境で正常に動作しなくなったため、Anders MelanderさんのBTM(Better Translation Manager)で国際化対応を追加しました。  
 プログラム本体は英語版として、日本語の言語リソースを`.JPN`として追加する形になっています。  
-自分でビルドしていて、BTMによる国際化対応を必要としない場合のために、当面の間`main`ブランチに加えて`japanese`ブランチを用意してあります。
+自分でビルドしていて、BTMによる国際化対応を必要としない場合のために、当面の間`main`ブランチに加えて`japanese`ブランチを用意してあります(下記 ビルド方法(`japanese`ブランチ) を参照)。
+
+### インストーラ(Version 1.4)
+Delphiで作成したプログラムのインストーラといえばInnoSetup https://jrsoftware.org/isinfo.php を使うのが一般的ですが、InnoSetupはMSIインストーラではないことと、以前にも何回か使用したことがあるため、別の選択肢を探してみました。MSI対応、非商用で無償のインストーラ作成ツールという条件だと、WiX Toolset https://www.firegiant.com/wixtoolset/ か Advanced Installer、という感じでした。  
+WiX Toolsetは結構難解という情報が多く見受けられたため、今回はAdvanced InstallerのFreeware Editionを採用しました。Advanced Installerはインストールしてライセンス登録をしなければFreeware Editionとして動作します。
 
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
 
 ## プログラムの変更について
 このプログラムには設定機能が一切存在しないため、何かを変えようとするときはプログラムを変更して再コンパイルする必要があります。DelphiのCommunity Editionは商用でなければ(商用でも一定の範囲で)自由に使用できるため、適宜コードを変更して再コンパイルしてご使用ください。
+
+### ビルド方法(`main`ブランチ)
+`main`ブランチをビルドする手順は以下のようになります。
+- Delphi(RAD Studio)のIDEを起動する
+- メインメニュー→ツール→オプションでオプションダイアログを開き、ユーザ定義環境変数の`LANGDIR`(なければ新規作成する)を空にする。
+- プロジェクト`WallClock.dproj`を開いてビルドする。
+- Better Translation Managerを起動し、`WallClock.xlat`を開き、メインメニュー→Buildで日本語リソースファイル(`.JPN`)をビルドする。
+- ユーザ定義環境変数の`LANGDIR`を'ja`に戻しておくのをお忘れなく。
+
+### ビルド方法(`japanese`ブランチ)
+`japanese`ブランチをビルドする手順は以下のようになります。
+- Delphi(RAD Studio)のIDEを起動する
+- メインメニュー→ツール→オプションでオプションダイアログを開き、ユーザ定義環境変数の`LANGDIR`があれば`ja`にする(なければ不要)。
+- プロジェクト`WallClock.dproj`を開いてビルドする。
 
 ## ライセンス
 このプログラムに固有のコードについてはMITライセンスが適用されます。
@@ -165,6 +188,9 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 
 Better Translation ManagerはMPL 2.0ライセンスの元で公開されています。<br />
 https://bitbucket.org/anders_melander/better-translation-manager/src/master/README.md
+
+Advanced InstallerはFreeware Editionのライセンスで非商用利用が許可されています。<br />
+https://www.advancedinstaller.com/licenses.html
 
 ## 更新履歴
 - Version 1.0.0 (2023-09-02)
@@ -205,4 +231,5 @@ https://bitbucket.org/anders_melander/better-translation-manager/src/master/READ
   - 開発環境をDelphi 12.2 Athensに変更。
   - ログイン時に起動するようレジストリ上に登録/登録解除する機能を追加。
   - 国際化対応を追加。
+  - Advanced Installerによるインストーラを追加。
 
