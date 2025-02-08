@@ -64,3 +64,6 @@ Win64/
 
 # BTM backup files
 *.$*
+
+# Setup files
+Setup/
