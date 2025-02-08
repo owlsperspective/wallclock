@@ -204,7 +204,7 @@ inherited FormWallClock: TFormWallClock
   end
   inherited ActionList: TActionList
     object ActionReverseColors: TAction
-      Caption = #33394#12434#21453#36578'(&R)'
+      Caption = '&Reverse colors'
       OnExecute = ActionReverseColorsExecute
     end
   end

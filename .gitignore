@@ -62,3 +62,5 @@ __recovery/
 Win32/
 Win64/
 
+# BTM backup files
+*.$*

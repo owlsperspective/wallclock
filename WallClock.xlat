@@ -1,0 +1,3992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xlat>
+  <meta>
+    <version>3</version>
+    <created>2025-02-08T21:04:20.514+09:00</created>
+    <tool>amTranslationManager</tool>
+    <toolversion>2.2.9089.3390</toolversion>
+  </meta>
+  <options>
+    <stringlisthandling>2</stringlisthandling>
+    <omitdonttranslate>True</omitdonttranslate>
+    <sorted>True</sorted>
+    <omitnewstate>True</omitnewstate>
+  </options>
+  <project sourcefile=".\Win32\Debug\WallClock.exe" stringsymbolfile=".\WallClock.drc" language="en-US" properties="396">
+    <targetlanguages>
+      <language language="ja-JP" translated="397"/>
+    </targetlanguages>
+    <modules>
+      <module name="resourcestrings" type="strings" properties="365">
+        <items>
+          <item name="System_RTLConsts_hNoFilterViewer">
+            <properties>
+              <property>
+                <value>No help viewer that supports filters</value>
+                <translations>
+                  <translation language="ja-JP">フィルタをサポートするヘルプ ビューアがありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SAncestorNotFound">
+            <properties>
+              <property>
+                <value>Ancestor for '%s' not found</value>
+                <translations>
+                  <translation language="ja-JP">継承元の '%s' が見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sArgumentInvalid">
+            <properties>
+              <property>
+                <value>Invalid argument</value>
+                <translations>
+                  <translation language="ja-JP">不正な引数が渡されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SArgumentNil">
+            <properties>
+              <property>
+                <value>Argument must not be nil</value>
+                <translations>
+                  <translation language="ja-JP">引数は nil 以外でなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SArgumentOutOfRange">
+            <properties>
+              <property>
+                <value>Argument out of range</value>
+                <translations>
+                  <translation language="ja-JP">引数が範囲外です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SAssignError">
+            <properties>
+              <property>
+                <value>Cannot assign a %s to a %s</value>
+                <translations>
+                  <translation language="ja-JP">%s を %s に代入することはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sBeginInvokeDestroying">
+            <properties>
+              <property>
+                <value>Cannot call BeginInvoke on a TComponent in the process of destruction</value>
+                <translations>
+                  <translation language="ja-JP">破棄処理中に TComponent の BeginInvoke を呼び出すことはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SBitsIndexError">
+            <properties>
+              <property>
+                <value>Bits index out of range</value>
+                <translations>
+                  <translation language="ja-JP">インデックスが範囲を超えました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SByRefArgMismatch">
+            <properties>
+              <property>
+                <value>VAR and OUT arguments must match parameter type exactly</value>
+                <translations>
+                  <translation language="ja-JP">var 引数および out 引数はパラメータの型と正確に一致する必要があります</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sCannotNegateTimespan">
+            <properties>
+              <property>
+                <value>Negating the minimum value of a Timespan is invalid</value>
+                <translations>
+                  <translation language="ja-JP">時間間隔の最小値を取り消すことは無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SCantWriteResourceStreamError">
+            <properties>
+              <property>
+                <value>Can't write to a read-only resource stream</value>
+                <translations>
+                  <translation language="ja-JP">読み取り専用リソース ストリームには書き込めません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SCheckSynchronizeError">
+            <properties>
+              <property>
+                <value>CheckSynchronize called from thread $%x, which is NOT the main thread</value>
+                <translations>
+                  <translation language="ja-JP">メインスレッドではないスレッド $%x から CheckSynchronize が呼び出されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SClassNotFound">
+            <properties>
+              <property>
+                <value>Class %s not found</value>
+                <translations>
+                  <translation language="ja-JP">クラス %s が見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateClass">
+            <properties>
+              <property>
+                <value>A class named %s already exists</value>
+                <translations>
+                  <translation language="ja-JP">クラス名 %s はすでに使われています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateItem">
+            <properties>
+              <property>
+                <value>List does not allow duplicates ($0%x)</value>
+                <translations>
+                  <translation language="ja-JP">リストは重複を許しません ($0%x)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateName">
+            <properties>
+              <property>
+                <value>A component named %s already exists</value>
+                <translations>
+                  <translation language="ja-JP">コンポーネント名 %s はすでに使われています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateString">
+            <properties>
+              <property>
+                <value>String list does not allow duplicates</value>
+                <translations>
+                  <translation language="ja-JP">文字列リストは重複を許しません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SEmptyPath">
+            <properties>
+              <property>
+                <value>Path is empty</value>
+                <translations>
+                  <translation language="ja-JP">パスが空です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SFCreateErrorEx">
+            <properties>
+              <property>
+                <value>Cannot create file "%s". %s</value>
+                <translations>
+                  <translation language="ja-JP">ファイル "%s" を作成できません。%s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SFOpenErrorEx">
+            <properties>
+              <property>
+                <value>Cannot open file "%s". %s</value>
+                <translations>
+                  <translation language="ja-JP">ファイル %s は開けません。 %s </translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SGenericDuplicateItem">
+            <properties>
+              <property>
+                <value>Duplicates not allowed</value>
+                <translations>
+                  <translation language="ja-JP">複製した項目は使用できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SGenericItemNotFound">
+            <properties>
+              <property>
+                <value>Item not found</value>
+                <translations>
+                  <translation language="ja-JP">項目が見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInputBufferExceed">
+            <properties>
+              <property>
+                <value>Input buffer exceeded for %s = %d, %s = %d</value>
+                <translations>
+                  <translation language="ja-JP">%s = %d、%s = %d の場合に入力バッファの上限を超えました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInsufficientRtti">
+            <properties>
+              <property>
+                <value>Insufficient RTTI available to support this operation</value>
+                <translations>
+                  <translation language="ja-JP">この操作をサポートするために十分な RTTI がありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidCharsInPath">
+            <properties>
+              <property>
+                <value>Invalid characters in path</value>
+                <translations>
+                  <translation language="ja-JP">パスに無効な文字が含まれています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidImage">
+            <properties>
+              <property>
+                <value>Invalid stream format</value>
+                <translations>
+                  <translation language="ja-JP">ストリーム形式が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidName">
+            <properties>
+              <property>
+                <value>''%s'' is not a valid component name</value>
+                <translations>
+                  <translation language="ja-JP">コンポーネント名に ''%s'' は使えません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidProperty">
+            <properties>
+              <property>
+                <value>Invalid property value</value>
+                <translations>
+                  <translation language="ja-JP">プロパティ値が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidPropertyPath">
+            <properties>
+              <property>
+                <value>Invalid property path</value>
+                <translations>
+                  <translation language="ja-JP">プロパティのパスが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidPropertyValue">
+            <properties>
+              <property>
+                <value>Invalid property value</value>
+                <translations>
+                  <translation language="ja-JP">プロパティ値が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidRegType">
+            <properties>
+              <property>
+                <value>Invalid data type for '%s'</value>
+                <translations>
+                  <translation language="ja-JP">'%s' のデータ型が不正です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidRttiDestroy">
+            <properties>
+              <property>
+                <value>RTTI objects cannot be manually destroyed by application code</value>
+                <translations>
+                  <translation language="ja-JP">RTTI オブジェクトはアプリケーション コードによる手動では破壊できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidStringAndObjectArrays">
+            <properties>
+              <property>
+                <value>Length of Strings and Objects arrays must be equal</value>
+                <translations>
+                  <translation language="ja-JP">文字列配列とオブジェクト配列の長さは等しくなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidTimeoutValue">
+            <properties>
+              <property>
+                <value>Invalid Timeout value: %s</value>
+                <translations>
+                  <translation language="ja-JP">タイムアウト値が無効です: %s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidTimespanDuration">
+            <properties>
+              <property>
+                <value>The duration cannot be returned because the absolute value exceeds the value of TTimeSpan.MaxValue</value>
+                <translations>
+                  <translation language="ja-JP">絶対値が TTimeSpan.MaxValue の値を超えているため、時間間隔を返せません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidTimespanFormat">
+            <properties>
+              <property>
+                <value>Invalid Timespan format</value>
+                <translations>
+                  <translation language="ja-JP">時間間隔の形式が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListCapacityError">
+            <properties>
+              <property>
+                <value>List capacity out of bounds (%d)</value>
+                <translations>
+                  <translation language="ja-JP">リストの容量が超えました (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListCountError">
+            <properties>
+              <property>
+                <value>List count out of bounds (%d)</value>
+                <translations>
+                  <translation language="ja-JP">リストの個数を超えました (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListIndexError">
+            <properties>
+              <property>
+                <value>List index out of bounds (%d)</value>
+                <translations>
+                  <translation language="ja-JP">リストのインデックスが範囲を超えています (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListIndexErrorEmptyReason">
+            <properties>
+              <property>
+                <value>.  %s is empty</value>
+                <translations>
+                  <translation language="ja-JP">.  %s は空です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListIndexErrorRangeReason">
+            <properties>
+              <property>
+                <value>.  %s range is 0..%d</value>
+                <translations>
+                  <translation language="ja-JP">.  %s 範囲は 0..%d です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SMemoryStreamError">
+            <properties>
+              <property>
+                <value>Out of memory while expanding memory stream</value>
+                <translations>
+                  <translation language="ja-JP">メモリーストリームを拡張しているときにメモリーが不足しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sMustWaitOnOneEvent">
+            <properties>
+              <property>
+                <value>Must wait on at least one event</value>
+                <translations>
+                  <translation language="ja-JP">少なくとも 1 つのイベントについて待機する必要があります</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoComSupport">
+            <properties>
+              <property>
+                <value>%s has not been registered as a COM class</value>
+                <translations>
+                  <translation language="ja-JP">%s は COM クラスとして登録されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sNoConstruct">
+            <properties>
+              <property>
+                <value>Class %s is not intended to be constructed</value>
+                <translations>
+                  <translation language="ja-JP">クラス %s はインスタンスを作成するためのものではありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoContext">
+            <properties>
+              <property>
+                <value>No context-sensitive help installed</value>
+                <translations>
+                  <translation language="ja-JP">状況依存型ヘルプがインストールされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoContextFound">
+            <properties>
+              <property>
+                <value>No help found for context %d</value>
+                <translations>
+                  <translation language="ja-JP">コンテキスト %d のヘルプが見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoIndex">
+            <properties>
+              <property>
+                <value>Unable to open Index</value>
+                <translations>
+                  <translation language="ja-JP">索引を開くことができません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNonPublicType">
+            <properties>
+              <property>
+                <value>Type '%s' is not declared in the interface section of a unit</value>
+                <translations>
+                  <translation language="ja-JP">型 '%s' がユニットの interface セクションで宣言されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoSearch">
+            <properties>
+              <property>
+                <value>Unable to open Search</value>
+                <translations>
+                  <translation language="ja-JP">検索を開くことができません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoTableOfContents">
+            <properties>
+              <property>
+                <value>Unable to find a Table of Contents</value>
+                <translations>
+                  <translation language="ja-JP">目次が見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNothingFound">
+            <properties>
+              <property>
+                <value>No help found for %s</value>
+                <translations>
+                  <translation language="ja-JP">%s に対応するヘルプが見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoTopics">
+            <properties>
+              <property>
+                <value>No topic-based help system installed</value>
+                <translations>
+                  <translation language="ja-JP">トピック ベースのヘルプ システムがインストールされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverMultipleSingleCast">
+            <properties>
+              <property>
+                <value>Cannot have multiple single cast observers added to the observers collection</value>
+                <translations>
+                  <translation language="ja-JP">複数のシングル キャスト オブザーバをオブザーバ コレクションに追加させることはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNoInterface">
+            <properties>
+              <property>
+                <value>The object does not implement the observer interface</value>
+                <translations>
+                  <translation language="ja-JP">オブジェクトがオブザーバ インターフェイスを実装していません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNoMulticastFound">
+            <properties>
+              <property>
+                <value>No multi cast observer with ID %d was added to the observer collection</value>
+                <translations>
+                  <translation language="ja-JP">ID が %d のマルチ キャスト オブザーバがオブザーバ コレクションに追加されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNoSinglecastFound">
+            <properties>
+              <property>
+                <value>No single cast observer with ID %d was added to the observer collection</value>
+                <translations>
+                  <translation language="ja-JP">ID が %d のシングル キャスト オブザーバがオブザーバ コレクションに追加されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNotAvailable">
+            <properties>
+              <property>
+                <value>Observer is not available</value>
+                <translations>
+                  <translation language="ja-JP">オブザーバが使用できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverUnsupported">
+            <properties>
+              <property>
+                <value>Observer is not supported</value>
+                <translations>
+                  <translation language="ja-JP">オブザーバがサポートされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SParameterCountMismatch">
+            <properties>
+              <property>
+                <value>Parameter count mismatch</value>
+                <translations>
+                  <translation language="ja-JP">パラメータ数が一致しません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SParamIsNegative">
+            <properties>
+              <property>
+                <value>Parameter %s cannot be a negative value</value>
+                <translations>
+                  <translation language="ja-JP">パラメータ %s は負の値以外でなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SParamIsNil">
+            <properties>
+              <property>
+                <value>Parameter %s cannot be nil</value>
+                <translations>
+                  <translation language="ja-JP">パラメータ %s は Nil 以外でなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPathFormatNotSupported">
+            <properties>
+              <property>
+                <value>The path format is not supported</value>
+                <translations>
+                  <translation language="ja-JP">パスの形式がサポートされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPathNotFound">
+            <properties>
+              <property>
+                <value>The specified path was not found</value>
+                <translations>
+                  <translation language="ja-JP">指定されたパスが見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPathTooLong">
+            <properties>
+              <property>
+                <value>The specified path is too long</value>
+                <translations>
+                  <translation language="ja-JP">指定されたパスが長すぎます</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPropertyException">
+            <properties>
+              <property>
+                <value>Error reading %s%s%s: %s</value>
+                <translations>
+                  <translation language="ja-JP">%s%s%s の読み取り中のエラー : %s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPropIsReadOnly">
+            <properties>
+              <property>
+                <value>Property '%s' is read-only</value>
+                <translations>
+                  <translation language="ja-JP">プロパティ '%s' は読み取り専用です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPropIsWriteOnly">
+            <properties>
+              <property>
+                <value>Property '%s' is write-only</value>
+                <translations>
+                  <translation language="ja-JP">プロパティ '%s' は書き込み専用です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SReadError">
+            <properties>
+              <property>
+                <value>Stream read error</value>
+                <translations>
+                  <translation language="ja-JP">ストリームからの読み取りエラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SReadOnlyProperty">
+            <properties>
+              <property>
+                <value>Property is read-only</value>
+                <translations>
+                  <translation language="ja-JP">プロパティは書き込み禁止です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SRegCreateFailed">
+            <properties>
+              <property>
+                <value>Failed to create key %s</value>
+                <translations>
+                  <translation language="ja-JP">キー %s の作成に失敗しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SRegGetDataFailed">
+            <properties>
+              <property>
+                <value>Failed to get data for '%s'</value>
+                <translations>
+                  <translation language="ja-JP">'%s' の取得に失敗しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SRegSetDataFailed">
+            <properties>
+              <property>
+                <value>Failed to set data for '%s'</value>
+                <translations>
+                  <translation language="ja-JP">'%s' の設定に失敗しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SResNotFound">
+            <properties>
+              <property>
+                <value>Resource %s not found</value>
+                <translations>
+                  <translation language="ja-JP">%s リソースが見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sSameArrays">
+            <properties>
+              <property>
+                <value>Source and Destination arrays must not be the same</value>
+                <translations>
+                  <translation language="ja-JP">ソースとターゲットの配列が同じであってはいけません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SSeekNotImplemented">
+            <properties>
+              <property>
+                <value>%s.Seek not implemented</value>
+                <translations>
+                  <translation language="ja-JP">%s.Seek は実装されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SServiceNotFound">
+            <properties>
+              <property>
+                <value>Specified Login Credential Service not found</value>
+                <translations>
+                  <translation language="ja-JP">指定されたログイン資格情報サービスが見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SSortedListError">
+            <properties>
+              <property>
+                <value>Operation not allowed on sorted list</value>
+                <translations>
+                  <translation language="ja-JP">ソートされる文字列リストに対しては許されない動作です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SSpecifiedFileNotFound">
+            <properties>
+              <property>
+                <value>The specified file was not found</value>
+                <translations>
+                  <translation language="ja-JP">指定されたファイルが見つかりません </translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sSpinCountOutOfRange">
+            <properties>
+              <property>
+                <value>SpinCount out of range. Must be between 0 and %d</value>
+                <translations>
+                  <translation language="ja-JP">スピン カウントが範囲外です。0 から %d までの数でなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SSPVersionStr">
+            <properties>
+              <property>
+                <value>%s Service Pack %4:d (Version %1:d.%2:d, Build %3:d, %5:s)</value>
+                <translations>
+                  <translation language="ja-JP">%s Service Pack %4:d (バージョン %1:d.%2:d、ビルド %3:d、%5:s)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadCreateError">
+            <properties>
+              <property>
+                <value>Thread creation error: %s</value>
+                <translations>
+                  <translation language="ja-JP">スレッド作成エラー: %s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadError">
+            <properties>
+              <property>
+                <value>Thread Error: %s (%d)</value>
+                <translations>
+                  <translation language="ja-JP">スレッドエラー: %s (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalCheckTerminated">
+            <properties>
+              <property>
+                <value>Cannot call CheckTerminated on an externally created thread</value>
+                <translations>
+                  <translation language="ja-JP">外部で生成されたスレッドでは CheckTerminated を呼び出せません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalSetReturnValue">
+            <properties>
+              <property>
+                <value>Cannot call SetReturnValue on an externally create thread</value>
+                <translations>
+                  <translation language="ja-JP">外部で生成されたスレッドでは SetReturnValue を呼び出せません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalTerminate">
+            <properties>
+              <property>
+                <value>Cannot terminate an externally created thread</value>
+                <translations>
+                  <translation language="ja-JP">外部から作成されたスレッドを終了させることはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalWait">
+            <properties>
+              <property>
+                <value>Cannot wait for an externally created thread</value>
+                <translations>
+                  <translation language="ja-JP">外部から作成されたスレッドを待機することはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadStartError">
+            <properties>
+              <property>
+                <value>Cannot call Start on a running or suspended thread</value>
+                <translations>
+                  <translation language="ja-JP">実行中または一時停止中のスレッドに対しては Start を呼び出せません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sTimespanElementTooLong">
+            <properties>
+              <property>
+                <value>Timespan element too long</value>
+                <translations>
+                  <translation language="ja-JP">時間間隔要素が長すぎます</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sTimespanTooLong">
+            <properties>
+              <property>
+                <value>Timespan too long</value>
+                <translations>
+                  <translation language="ja-JP">時間間隔が長すぎます</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sTimespanValueCannotBeNan">
+            <properties>
+              <property>
+                <value>Value cannot be NaN</value>
+                <translations>
+                  <translation language="ja-JP">値は NaN 以外でなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SUnknownGroup">
+            <properties>
+              <property>
+                <value>%s not in a class registration group</value>
+                <translations>
+                  <translation language="ja-JP">%s クラス登録グループに存在しません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SUnknownProperty">
+            <properties>
+              <property>
+                <value>Property %s does not exist</value>
+                <translations>
+                  <translation language="ja-JP">プロパティ %s が存在しません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SVersion32">
+            <properties>
+              <property>
+                <value>32-bit Edition</value>
+                <translations>
+                  <translation language="ja-JP">32 ビット版</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SVersion64">
+            <properties>
+              <property>
+                <value>64-bit Edition</value>
+                <translations>
+                  <translation language="ja-JP">64 ビット版</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SVersionStr">
+            <properties>
+              <property>
+                <value>%s (Version %d.%d, Build %d, %5:s)</value>
+                <translations>
+                  <translation language="ja-JP">%s (バージョン %d.%d、ビルド %d、%5:s)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows">
+            <properties>
+              <property>
+                <value>Windows</value>
+                <translations>
+                  <translation language="ja-JP">Windows</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows10">
+            <properties>
+              <property>
+                <value>Windows 10</value>
+                <translations>
+                  <translation language="ja-JP">Windows 10</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows11">
+            <properties>
+              <property>
+                <value>Windows 11</value>
+                <translations>
+                  <translation language="ja-JP">Windows 11</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows2000">
+            <properties>
+              <property>
+                <value>Windows 2000</value>
+                <translations>
+                  <translation language="ja-JP">Windows 2000</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows7">
+            <properties>
+              <property>
+                <value>Windows 7</value>
+                <translations>
+                  <translation language="ja-JP">Windows 7</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows8">
+            <properties>
+              <property>
+                <value>Windows 8</value>
+                <translations>
+                  <translation language="ja-JP">Windows 8</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows8Point1">
+            <properties>
+              <property>
+                <value>Windows 8.1</value>
+                <translations>
+                  <translation language="ja-JP">Windows 8.1</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2003">
+            <properties>
+              <property>
+                <value>Windows Server 2003</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2003</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2003R2">
+            <properties>
+              <property>
+                <value>Windows Server 2003 R2</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2003 R2</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2008">
+            <properties>
+              <property>
+                <value>Windows Server 2008</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2008</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2008R2">
+            <properties>
+              <property>
+                <value>Windows Server 2008 R2</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2008 R2</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2012">
+            <properties>
+              <property>
+                <value>Windows Server 2012</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2012</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2012R2">
+            <properties>
+              <property>
+                <value>Windows Server 2012 R2</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2012 R2</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2016">
+            <properties>
+              <property>
+                <value>Windows Server 2016</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2016</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2019">
+            <properties>
+              <property>
+                <value>Windows Server 2019</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2019</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2022">
+            <properties>
+              <property>
+                <value>Windows Server 2022</value>
+                <translations>
+                  <translation language="ja-JP">Windows Server 2022</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsVista">
+            <properties>
+              <property>
+                <value>Windows Vista</value>
+                <translations>
+                  <translation language="ja-JP">Windows Vista</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsXP">
+            <properties>
+              <property>
+                <value>Windows XP</value>
+                <translations>
+                  <translation language="ja-JP">Windows XP</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWinRTInstanceError">
+            <properties>
+              <property>
+                <value>Cannot create instance of class %s</value>
+                <translations>
+                  <translation language="ja-JP">クラス %s のインスタンスを作成できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWriteError">
+            <properties>
+              <property>
+                <value>Stream write error</value>
+                <translations>
+                  <translation language="ja-JP">ストリームへの書き込みエラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAbstractError">
+            <properties>
+              <property>
+                <value>Abstract Error</value>
+                <translations>
+                  <translation language="ja-JP">抽象エラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAccessDenied">
+            <properties>
+              <property>
+                <value>File access denied</value>
+                <translations>
+                  <translation language="ja-JP">ファイルへのアクセスが拒否されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAccessViolationArg3">
+            <properties>
+              <property>
+                <value>Access violation at address %p. %s of address %p</value>
+                <translations>
+                  <translation language="ja-JP">アドレス %0:p でアドレス %2:p に対する%1:s違反がおきました。</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAccessViolationNoArg">
+            <properties>
+              <property>
+                <value>Access violation</value>
+                <translations>
+                  <translation language="ja-JP">アクセス違反</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SArgumentMissing">
+            <properties>
+              <property>
+                <value>No argument for format '%s'</value>
+                <translations>
+                  <translation language="ja-JP">書式文字列 '%s' の引数が見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAssertError">
+            <properties>
+              <property>
+                <value>%s (%s, line %d)</value>
+                <translations>
+                  <translation language="ja-JP">%s (%s, %d 行)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAssertionFailed">
+            <properties>
+              <property>
+                <value>Assertion failed</value>
+                <translations>
+                  <translation language="ja-JP">アサートが失敗しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SByteIndexOutOfBounds">
+            <properties>
+              <property>
+                <value>Start index out of bounds (%d)</value>
+                <translations>
+                  <translation language="ja-JP">開始インデックスが範囲外です (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SCharIndexOutOfBounds">
+            <properties>
+              <property>
+                <value>Character index out of bounds (%d)</value>
+                <translations>
+                  <translation language="ja-JP">文字インデックスが範囲外です (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SControlC">
+            <properties>
+              <property>
+                <value>Control-C hit</value>
+                <translations>
+                  <translation language="ja-JP">CTRL-C</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDateEncodeError">
+            <properties>
+              <property>
+                <value>Invalid argument to date encode</value>
+                <translations>
+                  <translation language="ja-JP">日付に変換できない値が渡されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDiskFull">
+            <properties>
+              <property>
+                <value>Disk full</value>
+                <translations>
+                  <translation language="ja-JP">ディスクがいっぱいです</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDispatchError">
+            <properties>
+              <property>
+                <value>Variant method calls not supported</value>
+                <translations>
+                  <translation language="ja-JP">バリアントメソッド呼び出しはサポートされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDivByZero">
+            <properties>
+              <property>
+                <value>Division by zero</value>
+                <translations>
+                  <translation language="ja-JP">ゼロによる除算</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SEndOfFile">
+            <properties>
+              <property>
+                <value>Read beyond end of file</value>
+                <translations>
+                  <translation language="ja-JP">ファイルの末尾以降を読み取りました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SException">
+            <properties>
+              <property>
+                <value>Exception %s in module %s at %p.&amp;#13;&amp;#10;%s%s&amp;#13;&amp;#10;</value>
+                <translations>
+                  <translation language="ja-JP">%s がモジュール %s の %p で発生しました。&amp;#13;&amp;#10;%s%s&amp;#13;&amp;#10;</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SExceptTitle">
+            <properties>
+              <property>
+                <value>Application Error</value>
+                <translations>
+                  <translation language="ja-JP">アプリケーションエラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SExecuteAccess">
+            <properties>
+              <property>
+                <value>Execution</value>
+                <translations>
+                  <translation language="ja-JP">実行</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SExternalException">
+            <properties>
+              <property>
+                <value>External exception %x</value>
+                <translations>
+                  <translation language="ja-JP">外部例外 %x</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SFileNotFound">
+            <properties>
+              <property>
+                <value>File not found</value>
+                <translations>
+                  <translation language="ja-JP">ファイルが見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInOutError">
+            <properties>
+              <property>
+                <value>I/O error %d</value>
+                <translations>
+                  <translation language="ja-JP">I/O エラー %d</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SIntfCastError">
+            <properties>
+              <property>
+                <value>Interface not supported</value>
+                <translations>
+                  <translation language="ja-JP">Interface はサポートされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SIntOverflow">
+            <properties>
+              <property>
+                <value>Integer overflow</value>
+                <translations>
+                  <translation language="ja-JP">整数のオーバーフロー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidAccess">
+            <properties>
+              <property>
+                <value>Invalid access</value>
+                <translations>
+                  <translation language="ja-JP">アクセスが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidCast">
+            <properties>
+              <property>
+                <value>Invalid class typecast</value>
+                <translations>
+                  <translation language="ja-JP">無効なクラス型キャスト</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidCharCount">
+            <properties>
+              <property>
+                <value>Invalid count (%d)</value>
+                <translations>
+                  <translation language="ja-JP">カウントが無効です (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidCodePage">
+            <properties>
+              <property>
+                <value>Invalid code page</value>
+                <translations>
+                  <translation language="ja-JP">コード ページが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidDestinationArray">
+            <properties>
+              <property>
+                <value>Invalid destination array</value>
+                <translations>
+                  <translation language="ja-JP">ターゲット配列が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidDestinationIndex">
+            <properties>
+              <property>
+                <value>Invalid destination index (%d)</value>
+                <translations>
+                  <translation language="ja-JP">ターゲット インデックスが無効です (%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidEncodingName">
+            <properties>
+              <property>
+                <value>Invalid encoding name</value>
+                <translations>
+                  <translation language="ja-JP">エンコード名が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidFormat">
+            <properties>
+              <property>
+                <value>Format '%s' invalid or incompatible with argument</value>
+                <translations>
+                  <translation language="ja-JP">書式文字列 '%s' は正しくないか引数の型と一致しません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidGUID">
+            <properties>
+              <property>
+                <value>'%s' is not a valid GUID value</value>
+                <translations>
+                  <translation language="ja-JP">'%s' は正しい GUID ではありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidInput">
+            <properties>
+              <property>
+                <value>Invalid numeric input</value>
+                <translations>
+                  <translation language="ja-JP">入力値が数値ではありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidInteger">
+            <properties>
+              <property>
+                <value>'%s' is not a valid integer value</value>
+                <translations>
+                  <translation language="ja-JP">'%s' は整数ではありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidInteger2">
+            <properties>
+              <property>
+                <value>'%s' is not a valid integer value for %s type</value>
+                <translations>
+                  <translation language="ja-JP">'%s' は %s 型の値として有効な整数値ではありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidOp">
+            <properties>
+              <property>
+                <value>Invalid floating point operation</value>
+                <translations>
+                  <translation language="ja-JP">不正な浮動小数点数演算命令</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidPointer">
+            <properties>
+              <property>
+                <value>Invalid pointer operation</value>
+                <translations>
+                  <translation language="ja-JP">無効なポインタ操作</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidSourceArray">
+            <properties>
+              <property>
+                <value>Invalid source array</value>
+                <translations>
+                  <translation language="ja-JP">ソース配列が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidStringBaseIndex">
+            <properties>
+              <property>
+                <value>Invalid StringBaseIndex</value>
+                <translations>
+                  <translation language="ja-JP">StringBaseIndex が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidTimeStamp">
+            <properties>
+              <property>
+                <value>'%d.%d' is not a valid timestamp</value>
+                <translations>
+                  <translation language="ja-JP">'%d.%d' は正しいタイムスタンプではありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidUnknownFilename">
+            <properties>
+              <property>
+                <value>Invalid filename</value>
+                <translations>
+                  <translation language="ja-JP">ファイル名の指定が間違っています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarCast">
+            <properties>
+              <property>
+                <value>Invalid variant type conversion</value>
+                <translations>
+                  <translation language="ja-JP">バリアントの型変換が正しくありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarNullOp">
+            <properties>
+              <property>
+                <value>Invalid NULL variant operation</value>
+                <translations>
+                  <translation language="ja-JP">無効な NULL バリアント操作</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarOp">
+            <properties>
+              <property>
+                <value>Invalid variant operation</value>
+                <translations>
+                  <translation language="ja-JP">バリアントに対する演算が正しくありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarOpWithHResultWithPrefix">
+            <properties>
+              <property>
+                <value>Invalid variant operation (%s%.8x)&amp;#10;%s</value>
+                <translations>
+                  <translation language="ja-JP">無効なバリアント操作 (%s%.8x)&amp;#10;%s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameFri">
+            <properties>
+              <property>
+                <value>Friday</value>
+                <translations>
+                  <translation language="ja-JP">Friday</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameMon">
+            <properties>
+              <property>
+                <value>Monday</value>
+                <translations>
+                  <translation language="ja-JP">Monday</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameSat">
+            <properties>
+              <property>
+                <value>Saturday</value>
+                <translations>
+                  <translation language="ja-JP">Saturday</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameSun">
+            <properties>
+              <property>
+                <value>Sunday</value>
+                <translations>
+                  <translation language="ja-JP">Sunday</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameThu">
+            <properties>
+              <property>
+                <value>Thursday</value>
+                <translations>
+                  <translation language="ja-JP">Thursday</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameTue">
+            <properties>
+              <property>
+                <value>Tuesday</value>
+                <translations>
+                  <translation language="ja-JP">Tuesday</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameWed">
+            <properties>
+              <property>
+                <value>Wednesday</value>
+                <translations>
+                  <translation language="ja-JP">Wednesday</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameApr">
+            <properties>
+              <property>
+                <value>April</value>
+                <translations>
+                  <translation language="ja-JP">April</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameAug">
+            <properties>
+              <property>
+                <value>August</value>
+                <translations>
+                  <translation language="ja-JP">August</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameDec">
+            <properties>
+              <property>
+                <value>December</value>
+                <translations>
+                  <translation language="ja-JP">December</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameFeb">
+            <properties>
+              <property>
+                <value>February</value>
+                <translations>
+                  <translation language="ja-JP">February</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameJan">
+            <properties>
+              <property>
+                <value>January</value>
+                <translations>
+                  <translation language="ja-JP">January</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameJul">
+            <properties>
+              <property>
+                <value>July</value>
+                <translations>
+                  <translation language="ja-JP">July</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameJun">
+            <properties>
+              <property>
+                <value>June</value>
+                <translations>
+                  <translation language="ja-JP">June</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameMar">
+            <properties>
+              <property>
+                <value>March</value>
+                <translations>
+                  <translation language="ja-JP">March</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameMay">
+            <properties>
+              <property>
+                <value>May</value>
+                <translations>
+                  <translation language="ja-JP">May</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameNov">
+            <properties>
+              <property>
+                <value>November</value>
+                <translations>
+                  <translation language="ja-JP">November</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameOct">
+            <properties>
+              <property>
+                <value>October</value>
+                <translations>
+                  <translation language="ja-JP">October</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameSep">
+            <properties>
+              <property>
+                <value>September</value>
+                <translations>
+                  <translation language="ja-JP">September</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SModuleAccessViolation">
+            <properties>
+              <property>
+                <value>Access violation at address %p in module '%s' (offset %x). %s of address %p</value>
+                <translations>
+                  <translation language="ja-JP">モジュール '%1:s' のアドレス %0:p (オフセット %2:x) でアドレス %4:p に対する%3:s違反がおきました。</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SMonitorLockException">
+            <properties>
+              <property>
+                <value>Object lock not owned</value>
+                <translations>
+                  <translation language="ja-JP">オブジェクト ロックが所有されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SNoMappingForUnicodeCharacter">
+            <properties>
+              <property>
+                <value>No mapping for the Unicode character exists in the target multi-byte code page</value>
+                <translations>
+                  <translation language="ja-JP">Unicode 文字のマッピングがターゲットのマルチバイト コード ページに存在しません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SNoMonitorSupportException">
+            <properties>
+              <property>
+                <value>Monitor support function not initialized</value>
+                <translations>
+                  <translation language="ja-JP">モニタ サポート関数が初期化されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SNotImplemented">
+            <properties>
+              <property>
+                <value>Feature not implemented</value>
+                <translations>
+                  <translation language="ja-JP">機能が実装されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SObjectDisposed">
+            <properties>
+              <property>
+                <value>Method called on disposed object</value>
+                <translations>
+                  <translation language="ja-JP">破棄されたオブジェクトに対してメソッドが呼び出されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SOperationAborted">
+            <properties>
+              <property>
+                <value>Operation aborted</value>
+                <translations>
+                  <translation language="ja-JP">Abort による中断</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SOSError">
+            <properties>
+              <property>
+                <value>System Error.  Code: %d.&amp;#13;&amp;#10;%s%s</value>
+                <translations>
+                  <translation language="ja-JP">システム エラー。コード: %d。&amp;#13;&amp;#10;%s%s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SOutOfMemory">
+            <properties>
+              <property>
+                <value>Out of memory</value>
+                <translations>
+                  <translation language="ja-JP">メモリが足りません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SOverflow">
+            <properties>
+              <property>
+                <value>Floating point overflow</value>
+                <translations>
+                  <translation language="ja-JP">浮動小数点数のオーバーフロー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SPrivilege">
+            <properties>
+              <property>
+                <value>Privileged instruction</value>
+                <translations>
+                  <translation language="ja-JP">特権命令</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SRangeError">
+            <properties>
+              <property>
+                <value>Range check error</value>
+                <translations>
+                  <translation language="ja-JP">範囲チェックエラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SReadAccess">
+            <properties>
+              <property>
+                <value>Read</value>
+                <translations>
+                  <translation language="ja-JP">読み取り</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SSafecallException">
+            <properties>
+              <property>
+                <value>Exception in safecall method</value>
+                <translations>
+                  <translation language="ja-JP">safecall メソッド内で例外が発生しました。</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameFri">
+            <properties>
+              <property>
+                <value>Fri</value>
+                <translations>
+                  <translation language="ja-JP">Fri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameMon">
+            <properties>
+              <property>
+                <value>Mon</value>
+                <translations>
+                  <translation language="ja-JP">Mon</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameSat">
+            <properties>
+              <property>
+                <value>Sat</value>
+                <translations>
+                  <translation language="ja-JP">Sat</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameSun">
+            <properties>
+              <property>
+                <value>Sun</value>
+                <translations>
+                  <translation language="ja-JP">Sun</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameThu">
+            <properties>
+              <property>
+                <value>Thu</value>
+                <translations>
+                  <translation language="ja-JP">Thu</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameTue">
+            <properties>
+              <property>
+                <value>Tue</value>
+                <translations>
+                  <translation language="ja-JP">Tue</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameWed">
+            <properties>
+              <property>
+                <value>Wed</value>
+                <translations>
+                  <translation language="ja-JP">Wed</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameApr">
+            <properties>
+              <property>
+                <value>Apr</value>
+                <translations>
+                  <translation language="ja-JP">Apr</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameAug">
+            <properties>
+              <property>
+                <value>Aug</value>
+                <translations>
+                  <translation language="ja-JP">Aug</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameDec">
+            <properties>
+              <property>
+                <value>Dec</value>
+                <translations>
+                  <translation language="ja-JP">Dec</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameFeb">
+            <properties>
+              <property>
+                <value>Feb</value>
+                <translations>
+                  <translation language="ja-JP">Feb</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameJan">
+            <properties>
+              <property>
+                <value>Jan</value>
+                <translations>
+                  <translation language="ja-JP">Jan</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameJul">
+            <properties>
+              <property>
+                <value>Jul</value>
+                <translations>
+                  <translation language="ja-JP">Jul</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameJun">
+            <properties>
+              <property>
+                <value>Jun</value>
+                <translations>
+                  <translation language="ja-JP">Jun</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameMar">
+            <properties>
+              <property>
+                <value>Mar</value>
+                <translations>
+                  <translation language="ja-JP">Mar</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameMay">
+            <properties>
+              <property>
+                <value>May</value>
+                <translations>
+                  <translation language="ja-JP">May</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameNov">
+            <properties>
+              <property>
+                <value>Nov</value>
+                <translations>
+                  <translation language="ja-JP">Nov</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameOct">
+            <properties>
+              <property>
+                <value>Oct</value>
+                <translations>
+                  <translation language="ja-JP">Oct</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameSep">
+            <properties>
+              <property>
+                <value>Sep</value>
+                <translations>
+                  <translation language="ja-JP">Sep</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SStackOverflow">
+            <properties>
+              <property>
+                <value>Stack overflow</value>
+                <translations>
+                  <translation language="ja-JP">スタックオーバーフロー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_STimeEncodeError">
+            <properties>
+              <property>
+                <value>Invalid argument to time encode</value>
+                <translations>
+                  <translation language="ja-JP">時刻に変換できない値が渡されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_STooManyOpenFiles">
+            <properties>
+              <property>
+                <value>Too many open files</value>
+                <translations>
+                  <translation language="ja-JP">開かれたファイルが多すぎます。</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SUnderflow">
+            <properties>
+              <property>
+                <value>Floating point underflow</value>
+                <translations>
+                  <translation language="ja-JP">浮動小数点数のアンダーフロー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SUnknown">
+            <properties>
+              <property>
+                <value>&lt;unknown&gt;</value>
+                <translations>
+                  <translation language="ja-JP">&lt;未知&gt;</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SUnkOSError">
+            <properties>
+              <property>
+                <value>A call to an OS function failed</value>
+                <translations>
+                  <translation language="ja-JP">OS 機能呼び出しの失敗</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarArrayBounds">
+            <properties>
+              <property>
+                <value>Variant or safe array index out of bounds</value>
+                <translations>
+                  <translation language="ja-JP">バリアントまたは安全な配列の添え字の範囲を超えています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarArrayCreate">
+            <properties>
+              <property>
+                <value>Error creating variant or safe array</value>
+                <translations>
+                  <translation language="ja-JP">バリアント配列を作成できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarArrayLocked">
+            <properties>
+              <property>
+                <value>Variant or safe array is locked</value>
+                <translations>
+                  <translation language="ja-JP">バリアント配列がロックされています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarBadType">
+            <properties>
+              <property>
+                <value>Invalid variant type</value>
+                <translations>
+                  <translation language="ja-JP">バリアントタイプが不正です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarInvalid">
+            <properties>
+              <property>
+                <value>Invalid argument</value>
+                <translations>
+                  <translation language="ja-JP">不正な引数が渡されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarNotImplemented">
+            <properties>
+              <property>
+                <value>Operation not supported</value>
+                <translations>
+                  <translation language="ja-JP">サポートされていない操作です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarOverflow">
+            <properties>
+              <property>
+                <value>Variant overflow</value>
+                <translations>
+                  <translation language="ja-JP">バリアント オーバーフロー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeAlreadyUsedWithPrefix">
+            <properties>
+              <property>
+                <value>Custom variant type (%s%.4x) already used by %s</value>
+                <translations>
+                  <translation language="ja-JP">指定されたカスタムバリアント番号 (%s%.4x) は既に %s が使っています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeConvertOverflow">
+            <properties>
+              <property>
+                <value>Overflow while converting variant of type (%s) into type (%s)</value>
+                <translations>
+                  <translation language="ja-JP">%0:s 型から %1:s 型へのバリアント型変換でのオーバーフローエラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeCouldNotConvert">
+            <properties>
+              <property>
+                <value>Could not convert variant of type (%s) into type (%s)</value>
+                <translations>
+                  <translation language="ja-JP">%0:s型から %1:s 型へのバリアント型変換はできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeNotUsableWithPrefix">
+            <properties>
+              <property>
+                <value>Custom variant type (%s%.4x) is not usable</value>
+                <translations>
+                  <translation language="ja-JP">指定されたカスタムバリアント番号 (%s%.4x) は使用不可能です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeOutOfRangeWithPrefix">
+            <properties>
+              <property>
+                <value>Custom variant type (%s%.4x) is out of range</value>
+                <translations>
+                  <translation language="ja-JP">指定されたカスタムバリアント番号 (%s%.4x) は範囲を超えています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeTooManyCustom">
+            <properties>
+              <property>
+                <value>Too many custom variant types have been registered</value>
+                <translations>
+                  <translation language="ja-JP">カスタムバリアントの登録数が多すぎます</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarUnexpected">
+            <properties>
+              <property>
+                <value>Unexpected variant error</value>
+                <translations>
+                  <translation language="ja-JP">予期しないバリアントエラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SWriteAccess">
+            <properties>
+              <property>
+                <value>Write</value>
+                <translations>
+                  <translation language="ja-JP">書き込み</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SZeroDivide">
+            <properties>
+              <property>
+                <value>Floating point division by zero</value>
+                <translations>
+                  <translation language="ja-JP">0 による浮動小数点数除算</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_SNoMethod">
+            <properties>
+              <property>
+                <value>Method '%s' not supported by automation object</value>
+                <translations>
+                  <translation language="ja-JP">メソッド '%s' はオートメーション オブジェクトでサポートしていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_SOleError">
+            <properties>
+              <property>
+                <value>OLE error %.8x</value>
+                <translations>
+                  <translation language="ja-JP">OLE エラー %.8x</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_STooManyParams">
+            <properties>
+              <property>
+                <value>Dispatch methods do not support more than 64 parameters</value>
+                <translations>
+                  <translation language="ja-JP">ディスパッチメソッドは 64 個を超えるパラメータを処理できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_SVarNotObject">
+            <properties>
+              <property>
+                <value>Variant does not reference an automation object</value>
+                <translations>
+                  <translation language="ja-JP">バリアントはオートメーション オブジェクトを参照していません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_sAllFilter">
+            <properties>
+              <property>
+                <value>All</value>
+                <translations>
+                  <translation language="ja-JP">すべて(a)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_sBeginInvokeNoHandle">
+            <properties>
+              <property>
+                <value>Cannot call BeginInvoke on a control with no parent or window handle</value>
+                <translations>
+                  <translation language="ja-JP">親またはウィンドウ ハンドルを持たないコントロールの BeginInvoke を呼び出すことはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotDragForm">
+            <properties>
+              <property>
+                <value>Cannot drag a form</value>
+                <translations>
+                  <translation language="ja-JP">フォームはドラッグできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotFocus">
+            <properties>
+              <property>
+                <value>Cannot focus a disabled or invisible window</value>
+                <translations>
+                  <translation language="ja-JP">無効/非表示ウィンドウにはフォーカスを設定できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotOpenClipboard">
+            <properties>
+              <property>
+                <value>Cannot open clipboard: %s</value>
+                <translations>
+                  <translation language="ja-JP">クリップボード %s を開けません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotShowModal">
+            <properties>
+              <property>
+                <value>Cannot make a visible window modal</value>
+                <translations>
+                  <translation language="ja-JP">表示中のウィンドウをモーダルにできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SChangeIconSize">
+            <properties>
+              <property>
+                <value>Cannot change the size of an icon</value>
+                <translations>
+                  <translation language="ja-JP">アイコンのサイズを変更できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SChangeWicSize">
+            <properties>
+              <property>
+                <value>Cannot change the size of a WIC Image</value>
+                <translations>
+                  <translation language="ja-JP">WIC 対応イメージのサイズは変更できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SControlNonMainThreadUsage">
+            <properties>
+              <property>
+                <value>Control '%s' is used on a not main thread</value>
+                <translations>
+                  <translation language="ja-JP">コントロール '%s' が main ではないスレッド上で使用されています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SControlParentSetToSelf">
+            <properties>
+              <property>
+                <value>A control cannot have itself as its parent</value>
+                <translations>
+                  <translation language="ja-JP">コントロールの親をそのコントロール自体にはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SControlPath">
+            <properties>
+              <property>
+                <value>. Path:&amp;#13;&amp;#10;%s</value>
+                <translations>
+                  <translation language="ja-JP">。 パス:&amp;#13;&amp;#10;%s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDeviceOnPort">
+            <properties>
+              <property>
+                <value>%s on %s</value>
+                <translations>
+                  <translation language="ja-JP">%s (ポート %s)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockedCtlNeedsName">
+            <properties>
+              <property>
+                <value>Docked control must have a name</value>
+                <translations>
+                  <translation language="ja-JP">ドッキングコントロールは名前を持っていなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockTreeRemoveError">
+            <properties>
+              <property>
+                <value>Error removing control from dock tree</value>
+                <translations>
+                  <translation language="ja-JP">ドッキングツリーからコントロールを削除する際のエラー </translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockZoneHasNoCtl">
+            <properties>
+              <property>
+                <value> - Dock zone has no control</value>
+                <translations>
+                  <translation language="ja-JP">- ドッキングゾーンはコントロールを持ちません。</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockZoneNotFound">
+            <properties>
+              <property>
+                <value> - Dock zone not found</value>
+                <translations>
+                  <translation language="ja-JP">- ドッキングゾーンが見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockZoneVersionConflict">
+            <properties>
+              <property>
+                <value>Error loading dock zone from the stream. Expecting version %d, but found %d.</value>
+                <translations>
+                  <translation language="ja-JP">ストリームからドックゾーンの読み取りエラー。バージョン %d が必要ですが %d が見つかりました。 </translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDomain">
+            <properties>
+              <property>
+                <value>&amp;Domain</value>
+                <translations>
+                  <translation language="ja-JP">ドメイン(&amp;D)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDuplicateMenus">
+            <properties>
+              <property>
+                <value>Menu '%s' is already being used by another form</value>
+                <translations>
+                  <translation language="ja-JP">メニュー '%s' は別のフォームで既に使われています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SGroupIndexTooLow">
+            <properties>
+              <property>
+                <value>GroupIndex cannot be less than a previous menu item's GroupIndex</value>
+                <translations>
+                  <translation language="ja-JP">GroupIndex は前のメニュー項目の GroupIndex 以上でなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SIconToClipboard">
+            <properties>
+              <property>
+                <value>Clipboard does not support Icons</value>
+                <translations>
+                  <translation language="ja-JP">クリップボードはアイコンをサポートしていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageCanvasNeedsBitmap">
+            <properties>
+              <property>
+                <value>Can only modify an image if it contains a bitmap</value>
+                <translations>
+                  <translation language="ja-JP">変更できるのはビットマップを含む画像のみです</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageIndexError">
+            <properties>
+              <property>
+                <value>Invalid ImageList Index</value>
+                <translations>
+                  <translation language="ja-JP">画像リストのインデックスが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageReadFail">
+            <properties>
+              <property>
+                <value>Failed to read ImageList data from stream</value>
+                <translations>
+                  <translation language="ja-JP">ストリームからの ImageList データの読み取りに失敗しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageWriteFail">
+            <properties>
+              <property>
+                <value>Failed to write ImageList data to stream</value>
+                <translations>
+                  <translation language="ja-JP">ストリームへの ImageList データの書き込みに失敗しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInsertImage">
+            <properties>
+              <property>
+                <value>Unable to Insert Image</value>
+                <translations>
+                  <translation language="ja-JP">画像を挿入できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidBitmap">
+            <properties>
+              <property>
+                <value>Bitmap image is not valid</value>
+                <translations>
+                  <translation language="ja-JP">ビットマップ画像が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidFrameIndex">
+            <properties>
+              <property>
+                <value>Invalid image frame index %d: there are %d frames (0-%d)</value>
+                <translations>
+                  <translation language="ja-JP">不正なイメージ フレーム インデックス %d: %d 個のフレームがあります (0-%d)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidIcon">
+            <properties>
+              <property>
+                <value>Icon image is not valid</value>
+                <translations>
+                  <translation language="ja-JP">アイコン画像が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidImage">
+            <properties>
+              <property>
+                <value>Invalid image</value>
+                <translations>
+                  <translation language="ja-JP">画像が不正です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidImageList">
+            <properties>
+              <property>
+                <value>Invalid ImageList</value>
+                <translations>
+                  <translation language="ja-JP">画像リストが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidImageSize">
+            <properties>
+              <property>
+                <value>Invalid image size</value>
+                <translations>
+                  <translation language="ja-JP">画像サイズが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidMetafile">
+            <properties>
+              <property>
+                <value>Metafile is not valid</value>
+                <translations>
+                  <translation language="ja-JP">メタファイルが不正です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidPixelFormat">
+            <properties>
+              <property>
+                <value>Invalid pixel format</value>
+                <translations>
+                  <translation language="ja-JP">ピクセル形式が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidPrinter">
+            <properties>
+              <property>
+                <value>Printer selected is not valid</value>
+                <translations>
+                  <translation language="ja-JP">選択したプリンタが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidPrinterOp">
+            <properties>
+              <property>
+                <value>Operation not supported on selected printer</value>
+                <translations>
+                  <translation language="ja-JP">選択したプリンタで操作がサポートされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidTaskDlgButtonCaption">
+            <properties>
+              <property>
+                <value>Caption cannot be empty</value>
+                <translations>
+                  <translation language="ja-JP">Caption は空白にはできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidTextFormatFlag">
+            <properties>
+              <property>
+                <value>Text format flag '%s' not supported</value>
+                <translations>
+                  <translation language="ja-JP">テキスト書式設定フラグ '%s' はサポートされていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SLogin">
+            <properties>
+              <property>
+                <value>Login</value>
+                <translations>
+                  <translation language="ja-JP">ログイン</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMDIChildNotVisible">
+            <properties>
+              <property>
+                <value>Cannot hide an MDI Child Form</value>
+                <translations>
+                  <translation language="ja-JP">MDI 子フォームは非表示にできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMenuIndexError">
+            <properties>
+              <property>
+                <value>Menu index out of range</value>
+                <translations>
+                  <translation language="ja-JP">メニュー インデックスが範囲外です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMenuNotFound">
+            <properties>
+              <property>
+                <value>Sub-menu is not in menu</value>
+                <translations>
+                  <translation language="ja-JP">メニューに含まれないサブメニューです</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMenuReinserted">
+            <properties>
+              <property>
+                <value>Menu inserted twice</value>
+                <translations>
+                  <translation language="ja-JP">メニューが 2 回挿入されました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcAlt">
+            <properties>
+              <property>
+                <value>Alt+</value>
+                <translations>
+                  <translation language="ja-JP">Alt+</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcBkSp">
+            <properties>
+              <property>
+                <value>BkSp</value>
+                <translations>
+                  <translation language="ja-JP">BkSp</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcCtrl">
+            <properties>
+              <property>
+                <value>Ctrl+</value>
+                <translations>
+                  <translation language="ja-JP">Ctrl+</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcDel">
+            <properties>
+              <property>
+                <value>Del</value>
+                <translations>
+                  <translation language="ja-JP">Del</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcDown">
+            <properties>
+              <property>
+                <value>Down</value>
+                <translations>
+                  <translation language="ja-JP">Down</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcEnd">
+            <properties>
+              <property>
+                <value>End</value>
+                <translations>
+                  <translation language="ja-JP">End</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcEnter">
+            <properties>
+              <property>
+                <value>Enter</value>
+                <translations>
+                  <translation language="ja-JP">Enter</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcEsc">
+            <properties>
+              <property>
+                <value>Esc</value>
+                <translations>
+                  <translation language="ja-JP">Esc</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcHome">
+            <properties>
+              <property>
+                <value>Home</value>
+                <translations>
+                  <translation language="ja-JP">Home</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcIns">
+            <properties>
+              <property>
+                <value>Ins</value>
+                <translations>
+                  <translation language="ja-JP">Ins</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcLeft">
+            <properties>
+              <property>
+                <value>Left</value>
+                <translations>
+                  <translation language="ja-JP">Left</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcPgDn">
+            <properties>
+              <property>
+                <value>PgDn</value>
+                <translations>
+                  <translation language="ja-JP">PgDn</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcPgUp">
+            <properties>
+              <property>
+                <value>PgUp</value>
+                <translations>
+                  <translation language="ja-JP">PgUp</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcRight">
+            <properties>
+              <property>
+                <value>Right</value>
+                <translations>
+                  <translation language="ja-JP">Right</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcShift">
+            <properties>
+              <property>
+                <value>Shift+</value>
+                <translations>
+                  <translation language="ja-JP">Shift+</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcSpace">
+            <properties>
+              <property>
+                <value>Space</value>
+                <translations>
+                  <translation language="ja-JP">Space</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcTab">
+            <properties>
+              <property>
+                <value>Tab</value>
+                <translations>
+                  <translation language="ja-JP">Tab</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcUp">
+            <properties>
+              <property>
+                <value>Up</value>
+                <translations>
+                  <translation language="ja-JP">Up</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgAbort">
+            <properties>
+              <property>
+                <value>&amp;Abort</value>
+                <translations>
+                  <translation language="ja-JP">中止(&amp;A)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgAll">
+            <properties>
+              <property>
+                <value>&amp;All</value>
+                <translations>
+                  <translation language="ja-JP">すべて(&amp;A)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgCancel">
+            <properties>
+              <property>
+                <value>Cancel</value>
+                <translations>
+                  <translation language="ja-JP">キャンセル</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgClose">
+            <properties>
+              <property>
+                <value>&amp;Close</value>
+                <translations>
+                  <translation language="ja-JP">閉じる(&amp;C)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgConfirm">
+            <properties>
+              <property>
+                <value>Confirm</value>
+                <translations>
+                  <translation language="ja-JP">確認</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgError">
+            <properties>
+              <property>
+                <value>Error</value>
+                <translations>
+                  <translation language="ja-JP">エラー</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgHelp">
+            <properties>
+              <property>
+                <value>&amp;Help</value>
+                <translations>
+                  <translation language="ja-JP">ヘルプ(&amp;H)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgIgnore">
+            <properties>
+              <property>
+                <value>&amp;Ignore</value>
+                <translations>
+                  <translation language="ja-JP">無視(&amp;I)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgInformation">
+            <properties>
+              <property>
+                <value>Information</value>
+                <translations>
+                  <translation language="ja-JP">情報</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgNo">
+            <properties>
+              <property>
+                <value>&amp;No</value>
+                <translations>
+                  <translation language="ja-JP">いいえ(&amp;N)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgNoToAll">
+            <properties>
+              <property>
+                <value>N&amp;o to All</value>
+                <translations>
+                  <translation language="ja-JP">すべていいえ(&amp;O)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgOK">
+            <properties>
+              <property>
+                <value>OK</value>
+                <translations>
+                  <translation language="ja-JP">OK</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgRetry">
+            <properties>
+              <property>
+                <value>&amp;Retry</value>
+                <translations>
+                  <translation language="ja-JP">再試行(&amp;R)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgWarning">
+            <properties>
+              <property>
+                <value>Warning</value>
+                <translations>
+                  <translation language="ja-JP">警告</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgYes">
+            <properties>
+              <property>
+                <value>&amp;Yes</value>
+                <translations>
+                  <translation language="ja-JP">はい(&amp;Y)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgYesToAll">
+            <properties>
+              <property>
+                <value>Yes to &amp;All</value>
+                <translations>
+                  <translation language="ja-JP">すべてはい(&amp;A)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoCanvasHandle">
+            <properties>
+              <property>
+                <value>Canvas does not allow drawing</value>
+                <translations>
+                  <translation language="ja-JP">キャンバスには描画できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoDefaultPrinter">
+            <properties>
+              <property>
+                <value>There is no default printer currently selected</value>
+                <translations>
+                  <translation language="ja-JP">デフォルトのプリンタが現在選択されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoMDIForm">
+            <properties>
+              <property>
+                <value>Cannot create form. No MDI forms are currently active</value>
+                <translations>
+                  <translation language="ja-JP">フォームを作成できません。現在アクティブな MDI フォームはありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoTimers">
+            <properties>
+              <property>
+                <value>Not enough timers available</value>
+                <translations>
+                  <translation language="ja-JP">タイマーを取得できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNotPrinting">
+            <properties>
+              <property>
+                <value>Printer is not currently printing</value>
+                <translations>
+                  <translation language="ja-JP">プリンタは現在印刷を行っていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SOutOfRange">
+            <properties>
+              <property>
+                <value>Value must be between %d and %d</value>
+                <translations>
+                  <translation language="ja-JP">値は %d から %d までの間でなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SOutOfResources">
+            <properties>
+              <property>
+                <value>Out of system resources</value>
+                <translations>
+                  <translation language="ja-JP">システム リソース不足です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SParentGivenNotAParent">
+            <properties>
+              <property>
+                <value>Parent given is not a parent of '%s'</value>
+                <translations>
+                  <translation language="ja-JP">指定した親は '%s' の親ではありません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SParentRequired">
+            <properties>
+              <property>
+                <value>Control '%s' has no parent window</value>
+                <translations>
+                  <translation language="ja-JP">コントロール '%s' は親ウィンドウを持っていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPassword">
+            <properties>
+              <property>
+                <value>&amp;Password</value>
+                <translations>
+                  <translation language="ja-JP">パスワード(&amp;P)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPrinterIndexError">
+            <properties>
+              <property>
+                <value>Printer index out of range</value>
+                <translations>
+                  <translation language="ja-JP">プリンタ インデックスが範囲外です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPrinting">
+            <properties>
+              <property>
+                <value>Printing in progress</value>
+                <translations>
+                  <translation language="ja-JP">印刷実行中です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPromptArrayEmpty">
+            <properties>
+              <property>
+                <value>Prompt array must not be empty</value>
+                <translations>
+                  <translation language="ja-JP">プロンプト配列が空であってはなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPromptArrayTooShort">
+            <properties>
+              <property>
+                <value>Length of value array must be &gt;= length of prompt array</value>
+                <translations>
+                  <translation language="ja-JP">値配列の長さ &gt;= プロンプト配列の長さでなければなりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPropertyOutOfRange">
+            <properties>
+              <property>
+                <value>%s property out of range</value>
+                <translations>
+                  <translation language="ja-JP">プロパティ %s が範囲外です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SReplaceImage">
+            <properties>
+              <property>
+                <value>Unable to Replace Image</value>
+                <translations>
+                  <translation language="ja-JP">画像を置き換えられません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SScanLine">
+            <properties>
+              <property>
+                <value>Scan line index out of range</value>
+                <translations>
+                  <translation language="ja-JP">スキャン ライン インデックスが範囲外です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SScrollBarRange">
+            <properties>
+              <property>
+                <value>Scrollbar property out of range</value>
+                <translations>
+                  <translation language="ja-JP">スクロールバーのプロパティが範囲外です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleClassNotFound">
+            <properties>
+              <property>
+                <value>Style class '%s' not found</value>
+                <translations>
+                  <translation language="ja-JP">スタイル クラス '%s' が見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleClassRegisterError">
+            <properties>
+              <property>
+                <value>Style class '%s' already registered</value>
+                <translations>
+                  <translation language="ja-JP">スタイル クラス '%s' は既に登録されています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleFeatureNotSupported">
+            <properties>
+              <property>
+                <value>Feature not supported by this style</value>
+                <translations>
+                  <translation language="ja-JP">このスタイルでサポートされていない機能です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleFormatError">
+            <properties>
+              <property>
+                <value>Invalid style format</value>
+                <translations>
+                  <translation language="ja-JP">スタイルの形式が無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleHookClassNotRegistered">
+            <properties>
+              <property>
+                <value>Class '%s' is not registered for '%s'</value>
+                <translations>
+                  <translation language="ja-JP">クラス '%s' は '%s' 用に登録されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleHookClassRegistered">
+            <properties>
+              <property>
+                <value>Class '%s' is already registered for '%s'</value>
+                <translations>
+                  <translation language="ja-JP">クラス '%s' は既に '%s' 用に登録されています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleInvalidHandle">
+            <properties>
+              <property>
+                <value>Invalid style handle</value>
+                <translations>
+                  <translation language="ja-JP">スタイルのハンドルが無効です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleInvalidParameter">
+            <properties>
+              <property>
+                <value>%s parameter cannot be nil</value>
+                <translations>
+                  <translation language="ja-JP">%s パラメータは nil にできません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleLoadError">
+            <properties>
+              <property>
+                <value>Unable to load style '%s'</value>
+                <translations>
+                  <translation language="ja-JP">スタイル '%s' を読み込めません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleLoadErrors">
+            <properties>
+              <property>
+                <value>Unable to load styles: %s</value>
+                <translations>
+                  <translation language="ja-JP">スタイルを読み込めません: %s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleNotFound">
+            <properties>
+              <property>
+                <value>Style '%s' not found</value>
+                <translations>
+                  <translation language="ja-JP">スタイル '%s' が見つかりません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleNotRegistered">
+            <properties>
+              <property>
+                <value>Style '%s' is not registered</value>
+                <translations>
+                  <translation language="ja-JP">スタイル '%s' は登録されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleNotRegisteredNoName">
+            <properties>
+              <property>
+                <value>Style not registered</value>
+                <translations>
+                  <translation language="ja-JP">スタイルが登録されていません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleRegisterError">
+            <properties>
+              <property>
+                <value>Style '%s' already registered</value>
+                <translations>
+                  <translation language="ja-JP">スタイル '%s' は既に登録されています</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleUnregisterError">
+            <properties>
+              <property>
+                <value>Cannot unregister the system style</value>
+                <translations>
+                  <translation language="ja-JP">システム スタイルは登録解除できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_STaskDlgButtonCaption">
+            <properties>
+              <property>
+                <value>Button%d</value>
+                <translations>
+                  <translation language="ja-JP">Button%d</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_STaskDlgRadioButtonCaption">
+            <properties>
+              <property>
+                <value>RadioButton%d</value>
+                <translations>
+                  <translation language="ja-JP">RadioButton%d</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_STrayIconRemoveError">
+            <properties>
+              <property>
+                <value>Cannot remove shell notification icon</value>
+                <translations>
+                  <translation language="ja-JP">シェル通知アイコンが削除できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUnknownClipboardFormat">
+            <properties>
+              <property>
+                <value>Unsupported clipboard format</value>
+                <translations>
+                  <translation language="ja-JP">サポートされていないクリップボード形式です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUnknownExtension">
+            <properties>
+              <property>
+                <value>Unknown picture file extension (.%s)</value>
+                <translations>
+                  <translation language="ja-JP">画像のファイル拡張子 (.%s) が不明です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUnknownStreamFormat">
+            <properties>
+              <property>
+                <value>Unsupported stream format</value>
+                <translations>
+                  <translation language="ja-JP">サポートされていないストリーム形式です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUsername">
+            <properties>
+              <property>
+                <value>&amp;Username</value>
+                <translations>
+                  <translation language="ja-JP">ユーザー名(&amp;U)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVBitmaps">
+            <properties>
+              <property>
+                <value>Bitmaps</value>
+                <translations>
+                  <translation language="ja-JP">ビットマップ</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVEnhMetafiles">
+            <properties>
+              <property>
+                <value>Enhanced Metafiles</value>
+                <translations>
+                  <translation language="ja-JP">エンハンス メタファイル</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVIcons">
+            <properties>
+              <property>
+                <value>Icons</value>
+                <translations>
+                  <translation language="ja-JP">アイコン</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVisibleChanged">
+            <properties>
+              <property>
+                <value>Cannot change Visible in OnShow or OnHide</value>
+                <translations>
+                  <translation language="ja-JP">OnShow や OnHide では Visible を変更できません</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVMetafiles">
+            <properties>
+              <property>
+                <value>Metafiles</value>
+                <translations>
+                  <translation language="ja-JP">メタファイル</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVTIFFImages">
+            <properties>
+              <property>
+                <value>TIFF Images</value>
+                <translations>
+                  <translation language="ja-JP">TIFF 画像</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SWindowClass">
+            <properties>
+              <property>
+                <value>Error creating window class</value>
+                <translations>
+                  <translation language="ja-JP">ウィンドウクラスの作成でエラーが発生しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SWindowDCError">
+            <properties>
+              <property>
+                <value>Error creating window device context</value>
+                <translations>
+                  <translation language="ja-JP">デバイスコンテキストの作成に失敗しました</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SWindowsVistaRequired">
+            <properties>
+              <property>
+                <value>%s requires Windows Vista or later</value>
+                <translations>
+                  <translation language="ja-JP">%s は、Windows Vista 以降が必要です</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="TFORMWALLCLOCK" type="form" properties="21">
+        <items>
+          <item name="FormWallClock.ActionList.ActionReverseColors" type="TAction">
+            <properties>
+              <property name="Caption">
+                <value>&amp;Reverse colors</value>
+                <translations>
+                  <translation language="ja-JP">色を反転(&amp;R)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label1" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label1.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>0</value>
+                <translations>
+                  <translation language="ja-JP">0</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label2" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label2.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>0</value>
+                <translations>
+                  <translation language="ja-JP">0</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label3" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label3.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>:</value>
+                <translations>
+                  <translation language="ja-JP">:</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label4" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label4.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>0</value>
+                <translations>
+                  <translation language="ja-JP">0</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label5" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label5.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>0</value>
+                <translations>
+                  <translation language="ja-JP">0</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label6" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label6.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>:</value>
+                <translations>
+                  <translation language="ja-JP">:</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label7" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label7.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>0</value>
+                <translations>
+                  <translation language="ja-JP">0</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label8" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.Label8.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>0</value>
+                <translations>
+                  <translation language="ja-JP">0</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.LabelBatteryStatus" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.LabelBatteryStatus.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>100% (99h99m)</value>
+                <translations>
+                  <translation language="ja-JP">100% (99h99m)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.LabelDate" type="TSkLabel">
+            <properties>
+              <property name="TextSettings.Font.Families">
+                <value>Calibri</value>
+                <translations>
+                  <translation language="ja-JP">Calibri</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClock.LabelDate.Words[0]" type="TSkLabel">
+            <properties>
+              <property name="Caption">
+                <value>9999-99-99 (XXX)</value>
+                <translations>
+                  <translation language="ja-JP">9999-99-99 (XXX)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="TFORMWALLCLOCKBASE" type="form" properties="10">
+        <items>
+          <item name="FormWallClockBase" type="TFormWallClockBase">
+            <properties>
+              <property name="Caption">
+                <value>Wall clock</value>
+                <translations>
+                  <translation language="ja-JP">Wall clock</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>Segoe UI</value>
+                <translations>
+                  <translation language="ja-JP">Segoe UI</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClockBase.ActionList.ActionExit" type="TAction">
+            <properties>
+              <property name="Caption">
+                <value>E&amp;xit</value>
+                <translations>
+                  <translation language="ja-JP">終了(&amp;X)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClockBase.ActionList.ActionIgnoreFullScreen" type="TAction">
+            <properties>
+              <property name="Caption">
+                <value>&amp;Ignore full screen</value>
+                <translations>
+                  <translation language="ja-JP">フルスクリーンを無視(&amp;I)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClockBase.ActionList.ActionRegisterRunAtLogin" type="TAction">
+            <properties>
+              <property name="Caption">
+                <value>&amp;Register to registry</value>
+                <translations>
+                  <translation language="ja-JP">レジストリに登録する(&amp;R)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClockBase.ActionList.ActionUnregisterRunAtLogin" type="TAction">
+            <properties>
+              <property name="Caption">
+                <value>&amp;Unregister from registry</value>
+                <translations>
+                  <translation language="ja-JP">レジストリから登録解除する(&amp;U)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClockBase.PopupMenu.MenuItemMonitors" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>&amp;Monitor</value>
+                <translations>
+                  <translation language="ja-JP">モニタ(&amp;M)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClockBase.PopupMenu.MenuItemRunAtLogin" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Run at &amp;Login</value>
+                <translations>
+                  <translation language="ja-JP">ログイン時に起動(&amp;L)</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FormWallClockBase.TrayIcon" type="TTrayIcon">
+            <properties>
+              <property name="BalloonHint">
+                <value>BaloonHint</value>
+                <translations>
+                  <translation language="ja-JP">BaloonHint</translation>
+                </translations>
+              </property>
+              <property name="BalloonTitle">
+                <value>BaloonTitle</value>
+                <translations>
+                  <translation language="ja-JP">BaloonTitle</translation>
+                </translations>
+              </property>
+              <property name="Hint">
+                <value>Hint</value>
+                <translations>
+                  <translation language="ja-JP">Hint</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+    </modules>
+  </project>
+</xlat>

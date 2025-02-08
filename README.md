@@ -9,6 +9,7 @@
 - 他のプログラムが(PowerPointのスライドショーのように)全画面表示したり、全画面のDirect3Dアプリケーションが実行されているときは非表示になります。
 - ノートPCではバッテリステータス(残量、残り時間)を表示します(Version 1.3以降)。
 - ログイン時に起動する設定をコンテキストメニューからレジストリに登録/登録解除できます(Version 1.4以降)。
+- BTM(Better Translation Manager)による国際化対応(Version 1.4以降)
 
 ## 実行環境
 - Windows
@@ -25,6 +26,9 @@
 
     Delphi Community Edition - エンバカデロ・テクノロジーズ<br />
     https://www.embarcadero.com/jp/products/delphi/starter
+- Better Translation Manager<br />
+  https://bitbucket.org/anders_melander/better-translation-manager/
+
 
 ## 実行ファイル構成
 - 実行ファイル一式はGitHubからダウンロードできます。
@@ -134,6 +138,11 @@ https://docwiki.embarcadero.com/Libraries/ja/Vcl.Controls.TWinControl.RecreateWn
 
 https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys
 
+### 国際化対応(Version 1.4)
+Delphi標準だったトランスレーションツールがDelphi 10.3 Rioでdeprecatedになり、さらにDelphi 12 AthensではGetIt経由でのインストールになったことに加え、手元の環境で正常に動作しなくなったため、Anders MelanderさんのBTM(Better Translation Manager)で国際化対応を追加しました。  
+プログラム本体は英語版として、日本語の言語リソースを`.JPN`として追加する形になっています。  
+自分でビルドしていて、BTMによる国際化対応を必要としない場合のために、当面の間`main`ブランチに加えて`japanese`ブランチを用意してあります。
+
 ## 既知かもしれない問題
 - HiDPIの対応は単にマニフェストで"Per-Monitor (V2) DPI"を指定しているだけなので、100%以外のスケールでは正しく表示されないかもしれません。
 
@@ -153,6 +162,9 @@ https://licenses.opensource.jp/MIT/MIT.html
 
 Skia4DelphiはMITライセンスの元で公開されています。<br />
 https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
+
+Better Translation ManagerはMPL 2.0ライセンスの元で公開されています。<br />
+https://bitbucket.org/anders_melander/better-translation-manager/src/master/README.md
 
 ## 更新履歴
 - Version 1.0.0 (2023-09-02)
@@ -192,4 +204,5 @@ https://github.com/skia4delphi/skia4delphi/blob/main/LICENSE
 - Version 1.4.0 (2025-02-08)
   - 開発環境をDelphi 12.2 Athensに変更。
   - ログイン時に起動するようレジストリ上に登録/登録解除する機能を追加。
+  - 国際化対応を追加。
 
